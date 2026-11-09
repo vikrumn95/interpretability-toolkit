@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "interp-toolkit"
+version = "0.1.0"
+description = "Small activation-patching toolkit built on TransformerLens' TransformerBridge"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "transformer-lens>=4.3,<5",
+    "torch>=2.2",
+    "numpy",
+    "matplotlib>=3.7",
+    "psutil>=5.9",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.setuptools]
+packages = ["interp_toolkit"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = ["ignore::DeprecationWarning", "ignore::FutureWarning"]
