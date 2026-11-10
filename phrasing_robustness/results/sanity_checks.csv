@@ -1,0 +1,16 @@
+template,id,control,clean_logit_diff,patched_logit_diff,abs_score_error,recovery,passed
+capital_of,france_italy,patch country token residual at layer 0,1.404937744140625,1.404937744140625,0.0,1.0,True
+capital_of,germany_spain,patch country token residual at layer 0,3.920745849609375,3.920745849609375,0.0,1.0,True
+capital_of,japan_china,patch country token residual at layer 0,3.4220809936523438,3.4220809936523438,0.0,1.0,True
+capital_of,russia_canada,patch country token residual at layer 0,7.267478942871094,7.267478942871094,0.0,1.0,True
+capital_of,iran_iraq,patch country token residual at layer 0,4.082069396972656,4.082069396972656,0.0,1.0,True
+capital_city,france_italy,patch country token residual at layer 0,0.5229110717773438,0.5229110717773438,0.0,1.0,True
+capital_city,germany_spain,patch country token residual at layer 0,2.6985931396484375,2.6985931396484375,0.0,1.0,True
+capital_city,japan_china,patch country token residual at layer 0,2.1686477661132812,2.1686477661132812,0.0,1.0,True
+capital_city,russia_canada,patch country token residual at layer 0,5.9394378662109375,5.9394378662109375,0.0,1.0,True
+capital_city,iran_iraq,patch country token residual at layer 0,3.6205215454101562,3.6205215454101562,0.0,1.0,True
+possessive,france_italy,patch country token residual at layer 0,0.6365203857421875,0.6365203857421875,0.0,1.0,True
+possessive,germany_spain,patch country token residual at layer 0,3.1735000610351562,3.1735000610351562,0.0,1.0,True
+possessive,japan_china,patch country token residual at layer 0,2.2168350219726562,2.2168350219726562,0.0,1.0,True
+possessive,russia_canada,patch country token residual at layer 0,6.9255523681640625,6.9255523681640625,0.0,1.0,True
+possessive,iran_iraq,patch country token residual at layer 0,3.8327255249023438,3.8327255249023438,0.0,1.0,True

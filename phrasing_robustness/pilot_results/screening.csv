@@ -1,0 +1,10 @@
+id,template,clean_prompt,corrupted_prompt,clean_target,corrupted_target,accepted,reason,country_position,final_position,seq_len,clean_score,corrupted_score,baseline_gap,clean_target_rank,corrupted_target_rank,clean_top_token,corrupted_top_token
+france_italy,capital_of,The capital of France is,The capital of Italy is, Paris, Rome,True,passes prespecified checks,4,5,6,1.404937744140625,-4.417366027832031,5.822303771972656,93,8, now, now
+france_italy,capital_city,The capital city of France is,The capital city of Italy is, Paris, Rome,True,passes prespecified checks,5,6,7,0.5229110717773438,-3.224639892578125,3.7475509643554688,537,120, now, home
+france_italy,possessive,France's capital is,Italy's capital is, Paris, Rome,True,passes prespecified checks,1,4,5,0.6365203857421875,-2.9419631958007812,3.5784835815429688,497,178, now, now
+germany_spain,capital_of,The capital of Germany is,The capital of Spain is, Berlin, Madrid,True,passes prespecified checks,4,5,6,3.920745849609375,-4.025459289550781,7.946205139160156,28,12, now, the
+germany_spain,capital_city,The capital city of Germany is,The capital city of Spain is, Berlin, Madrid,True,passes prespecified checks,5,6,7,2.6985931396484375,-1.9868011474609375,4.685394287109375,284,257, now, now
+germany_spain,possessive,Germany's capital is,Spain's capital is, Berlin, Madrid,True,passes prespecified checks,1,4,5,3.1735000610351562,-1.9428863525390625,5.116386413574219,213,277, now, now
+japan_china,capital_of,The capital of Japan is,The capital of China is, Tokyo, Beijing,True,passes prespecified checks,4,5,6,3.4220809936523438,-2.8162689208984375,6.238349914550781,26,32, home, home
+japan_china,capital_city,The capital city of Japan is,The capital city of China is, Tokyo, Beijing,True,passes prespecified checks,5,6,7,2.1686477661132812,-1.9567718505859375,4.125419616699219,165,191, home, home
+japan_china,possessive,Japan's capital is,China's capital is, Tokyo, Beijing,True,passes prespecified checks,1,4,5,2.2168350219726562,-2.9444427490234375,5.161277770996094,144,68, home, now

@@ -1,0 +1,43 @@
+id,template,clean_prompt,corrupted_prompt,clean_target,corrupted_target,accepted,reason,country_position,final_position,seq_len,clean_score,corrupted_score,baseline_gap,clean_target_rank,corrupted_target_rank,clean_top_token,corrupted_top_token
+france_italy,capital_of,The capital of France is,The capital of Italy is, Paris, Rome,True,passes prespecified checks,4,5,6,1.404937744140625,-4.417366027832031,5.822303771972656,93,8, now, now
+france_italy,capital_city,The capital city of France is,The capital city of Italy is, Paris, Rome,True,passes prespecified checks,5,6,7,0.5229110717773438,-3.224639892578125,3.7475509643554688,537,120, now, home
+france_italy,possessive,France's capital is,Italy's capital is, Paris, Rome,True,passes prespecified checks,1,4,5,0.6365203857421875,-2.9419631958007812,3.5784835815429688,497,178, now, now
+germany_spain,capital_of,The capital of Germany is,The capital of Spain is, Berlin, Madrid,True,passes prespecified checks,4,5,6,3.920745849609375,-4.025459289550781,7.946205139160156,28,12, now, the
+germany_spain,capital_city,The capital city of Germany is,The capital city of Spain is, Berlin, Madrid,True,passes prespecified checks,5,6,7,2.6985931396484375,-1.9868011474609375,4.685394287109375,284,257, now, now
+germany_spain,possessive,Germany's capital is,Spain's capital is, Berlin, Madrid,True,passes prespecified checks,1,4,5,3.1735000610351562,-1.9428863525390625,5.116386413574219,213,277, now, now
+japan_china,capital_of,The capital of Japan is,The capital of China is, Tokyo, Beijing,True,passes prespecified checks,4,5,6,3.4220809936523438,-2.8162689208984375,6.238349914550781,26,32, home, home
+japan_china,capital_city,The capital city of Japan is,The capital city of China is, Tokyo, Beijing,True,passes prespecified checks,5,6,7,2.1686477661132812,-1.9567718505859375,4.125419616699219,165,191, home, home
+japan_china,possessive,Japan's capital is,China's capital is, Tokyo, Beijing,True,passes prespecified checks,1,4,5,2.2168350219726562,-2.9444427490234375,5.161277770996094,144,68, home, now
+norway_sweden,capital_of,The capital of Norway is,The capital of Sweden is, Oslo, Stockholm,False,baseline does not favor opposite capital targets,4,5,6,-0.34560394287109375,-3.2991714477539062,2.9535675048828125,534,303, a, now
+norway_sweden,capital_city,The capital city of Norway is,The capital city of Sweden is, Oslo, Stockholm,False,baseline does not favor opposite capital targets,5,6,7,-0.9738693237304688,-3.05108642578125,2.0772171020507812,3354,1897, home, now
+norway_sweden,possessive,Norway's capital is,Sweden's capital is, Oslo, Stockholm,False,prompts differ at 2 token positions (not one),,,,,,,,,,
+austria_belgium,capital_of,The capital of Austria is,The capital of Belgium is, Vienna, Brussels,True,passes prespecified checks,4,5,6,1.7829208374023438,-2.8982391357421875,4.681159973144531,261,129, now, now
+austria_belgium,capital_city,The capital city of Austria is,The capital city of Belgium is, Vienna, Brussels,True,passes prespecified checks,5,6,7,0.83184814453125,-2.1820526123046875,3.0139007568359375,1634,967, now, now
+austria_belgium,possessive,Austria's capital is,Belgium's capital is, Vienna, Brussels,False,different prompt token lengths,,,,,,,,,,
+portugal_greece,capital_of,The capital of Portugal is,The capital of Greece is, Lisbon, Athens,True,passes prespecified checks,4,5,6,0.8271865844726562,-8.215385437011719,9.042572021484375,40,11, now, now
+portugal_greece,capital_city,The capital city of Portugal is,The capital city of Greece is, Lisbon, Athens,False,baseline does not favor opposite capital targets,5,6,7,-0.8908843994140625,-6.724098205566406,5.833213806152344,899,143, now, now
+portugal_greece,possessive,Portugal's capital is,Greece's capital is, Lisbon, Athens,False,different prompt token lengths,,,,,,,,,,
+finland_denmark,capital_of,The capital of Finland is,The capital of Denmark is, Helsinki, Copenhagen,True,passes prespecified checks,4,5,6,3.0942001342773438,-3.2204132080078125,6.314613342285156,73,106, home, a
+finland_denmark,capital_city,The capital city of Finland is,The capital city of Denmark is, Helsinki, Copenhagen,True,passes prespecified checks,5,6,7,1.5103683471679688,-2.6432876586914062,4.153656005859375,747,880, home, now
+finland_denmark,possessive,Finland's capital is,Denmark's capital is, Helsinki, Copenhagen,False,prompts differ at 2 token positions (not one),,,,,,,,,,
+hungary_romania,capital_of,The capital of Hungary is,The capital of Romania is, Budapest, Bucharest,False,capital name is not a single GPT-2 token,,,,,,,,,,
+hungary_romania,capital_city,The capital city of Hungary is,The capital city of Romania is, Budapest, Bucharest,False,capital name is not a single GPT-2 token,,,,,,,,,,
+hungary_romania,possessive,Hungary's capital is,Romania's capital is, Budapest, Bucharest,False,capital name is not a single GPT-2 token,,,,,,,,,,
+russia_canada,capital_of,The capital of Russia is,The capital of Canada is, Moscow, Ottawa,True,passes prespecified checks,4,5,6,7.267478942871094,-2.9720840454101562,10.23956298828125,28,220, now, home
+russia_canada,capital_city,The capital city of Russia is,The capital city of Canada is, Moscow, Ottawa,True,passes prespecified checks,5,6,7,5.9394378662109375,-1.6658554077148438,7.605293273925781,186,877, home, home
+russia_canada,possessive,Russia's capital is,Canada's capital is, Moscow, Ottawa,True,passes prespecified checks,1,4,5,6.9255523681640625,-1.6580963134765625,8.583648681640625,111,747, now, home
+vietnam_thailand,capital_of,The capital of Vietnam is,The capital of Thailand is, Hanoi, Bangkok,False,capital name is not a single GPT-2 token,,,,,,,,,,
+vietnam_thailand,capital_city,The capital city of Vietnam is,The capital city of Thailand is, Hanoi, Bangkok,False,capital name is not a single GPT-2 token,,,,,,,,,,
+vietnam_thailand,possessive,Vietnam's capital is,Thailand's capital is, Hanoi, Bangkok,False,capital name is not a single GPT-2 token,,,,,,,,,,
+cuba_peru,capital_of,The capital of Cuba is,The capital of Peru is, Havana, Lima,True,passes prespecified checks,4,5,6,4.756011962890625,-2.1850128173828125,6.9410247802734375,165,1128, a, the
+cuba_peru,capital_city,The capital city of Cuba is,The capital city of Peru is, Havana, Lima,True,passes prespecified checks,5,6,7,4.156379699707031,-1.1506805419921875,5.307060241699219,1039,3777, home, home
+cuba_peru,possessive,Cuba's capital is,Peru's capital is, Havana, Lima,False,prompts differ at 2 token positions (not one),,,,,,,,,,
+iran_iraq,capital_of,The capital of Iran is,The capital of Iraq is, Tehran, Baghdad,True,passes prespecified checks,4,5,6,4.082069396972656,-2.1379852294921875,6.220054626464844,22,85, home, now
+iran_iraq,capital_city,The capital city of Iran is,The capital city of Iraq is, Tehran, Baghdad,True,passes prespecified checks,5,6,7,3.6205215454101562,-0.9400177001953125,4.560539245605469,233,626, home, home
+iran_iraq,possessive,Iran's capital is,Iraq's capital is, Tehran, Baghdad,True,passes prespecified checks,1,4,5,3.8327255249023438,-1.2578277587890625,5.090553283691406,41,334, a, now
+turkey_poland,capital_of,The capital of Turkey is,The capital of Poland is, Ankara, Warsaw,True,passes prespecified checks,4,5,6,4.1956329345703125,-5.947021484375,10.142654418945312,62,10, home, now
+turkey_poland,capital_city,The capital city of Turkey is,The capital city of Poland is, Ankara, Warsaw,True,passes prespecified checks,5,6,7,2.668731689453125,-3.730987548828125,6.39971923828125,471,200, home, home
+turkey_poland,possessive,Turkey's capital is,Poland's capital is, Ankara, Warsaw,False,different prompt token lengths,,,,,,,,,,
+netherlands_switzerland,capital_of,The capital of Netherlands is,The capital of Switzerland is, Amsterdam, Bern,False,baseline does not favor opposite capital targets,4,5,6,5.709281921386719,1.1267623901367188,4.58251953125,40,2788, a, the
+netherlands_switzerland,capital_city,The capital city of Netherlands is,The capital city of Switzerland is, Amsterdam, Bern,False,baseline does not favor opposite capital targets,5,6,7,4.620208740234375,1.6158370971679688,3.0043716430664062,564,5318, now, the
+netherlands_switzerland,possessive,Netherlands's capital is,Switzerland's capital is, Amsterdam, Bern,False,different prompt token lengths,,,,,,,,,,

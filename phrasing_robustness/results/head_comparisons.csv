@@ -1,0 +1,4 @@
+template_a,template_b,n_heads,spearman_rank_correlation,top10_overlap_count,top10_jaccard
+capital_of,capital_city,144,0.9222409774133912,9,0.8181818181818182
+capital_of,possessive,144,0.7670605256812154,9,0.8181818181818182
+capital_city,possessive,144,0.7839602925809821,8,0.6666666666666666

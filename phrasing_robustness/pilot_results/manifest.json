@@ -1,0 +1,114 @@
+{
+  "created_utc": "2026-11-09T21:39:11.094055+00:00",
+  "git_sha": "a470cd8b41d024ee1cd21e77a3725f8a9019d4b7",
+  "model": "openai-community/gpt2",
+  "device": "cpu",
+  "pilot": true,
+  "heads": true,
+  "min_gap": 1.0,
+  "screening_rule": "exactly one input-token mismatch, single-token capital targets, clean logit diff > 0, corrupted logit diff < 0, gap >= min_gap; must pass all three templates",
+  "important_caveat": "Screening is conditional on baseline behavior; findings apply to this selected subset, not all country facts. Target need not be top-1 prediction.",
+  "hypothesis": "Some influential layer/head locations for capital-city recall will be shared across phrasings when the same country pairs are used; similarity metrics are descriptive and not statistical significance tests.",
+  "templates": {
+    "capital_of": "The capital of {country} is",
+    "capital_city": "The capital city of {country} is",
+    "possessive": "{country}'s capital is"
+  },
+  "candidate_pool": [
+    {
+      "id": "france_italy",
+      "clean_country": "France",
+      "clean_city": "Paris",
+      "corrupted_country": "Italy",
+      "corrupted_city": "Rome"
+    },
+    {
+      "id": "germany_spain",
+      "clean_country": "Germany",
+      "clean_city": "Berlin",
+      "corrupted_country": "Spain",
+      "corrupted_city": "Madrid"
+    },
+    {
+      "id": "japan_china",
+      "clean_country": "Japan",
+      "clean_city": "Tokyo",
+      "corrupted_country": "China",
+      "corrupted_city": "Beijing"
+    }
+  ],
+  "selected": [
+    {
+      "id": "france_italy",
+      "clean_country": "France",
+      "clean_city": "Paris",
+      "corrupted_country": "Italy",
+      "corrupted_city": "Rome",
+      "per_template": {
+        "capital_of": {
+          "country_position": 4,
+          "final_position": 5,
+          "seq_len": 6
+        },
+        "capital_city": {
+          "country_position": 5,
+          "final_position": 6,
+          "seq_len": 7
+        },
+        "possessive": {
+          "country_position": 1,
+          "final_position": 4,
+          "seq_len": 5
+        }
+      }
+    },
+    {
+      "id": "germany_spain",
+      "clean_country": "Germany",
+      "clean_city": "Berlin",
+      "corrupted_country": "Spain",
+      "corrupted_city": "Madrid",
+      "per_template": {
+        "capital_of": {
+          "country_position": 4,
+          "final_position": 5,
+          "seq_len": 6
+        },
+        "capital_city": {
+          "country_position": 5,
+          "final_position": 6,
+          "seq_len": 7
+        },
+        "possessive": {
+          "country_position": 1,
+          "final_position": 4,
+          "seq_len": 5
+        }
+      }
+    },
+    {
+      "id": "japan_china",
+      "clean_country": "Japan",
+      "clean_city": "Tokyo",
+      "corrupted_country": "China",
+      "corrupted_city": "Beijing",
+      "per_template": {
+        "capital_of": {
+          "country_position": 4,
+          "final_position": 5,
+          "seq_len": 6
+        },
+        "capital_city": {
+          "country_position": 5,
+          "final_position": 6,
+          "seq_len": 7
+        },
+        "possessive": {
+          "country_position": 1,
+          "final_position": 4,
+          "seq_len": 5
+        }
+      }
+    }
+  ]
+}

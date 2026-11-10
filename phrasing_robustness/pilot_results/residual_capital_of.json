@@ -1,0 +1,3630 @@
+{
+ "config": {
+  "components": [
+   "resid_pre"
+  ],
+  "layers": null,
+  "positions": null,
+  "per_position": true,
+  "per_head": false,
+  "readout_position": -1,
+  "prepend_bos": true
+ },
+ "pairs": [
+  {
+   "clean": "The capital of France is",
+   "corrupted": "The capital of Italy is",
+   "clean_target": " Paris",
+   "corrupted_target": " Rome"
+  },
+  {
+   "clean": "The capital of Germany is",
+   "corrupted": "The capital of Spain is",
+   "clean_target": " Berlin",
+   "corrupted_target": " Madrid"
+  },
+  {
+   "clean": "The capital of Japan is",
+   "corrupted": "The capital of China is",
+   "clean_target": " Tokyo",
+   "corrupted_target": " Beijing"
+  }
+ ],
+ "baselines": [
+  {
+   "pair": 0,
+   "clean": {
+    "target_logits": [
+     -105.43570709228516,
+     -106.84064483642578
+    ],
+    "logsumexp": -99.01591491699219,
+    "top_token_id": 783,
+    "top_token": " now"
+   },
+   "corrupted": {
+    "target_logits": [
+     -103.07563781738281,
+     -98.65827178955078
+    ],
+    "logsumexp": -94.47563171386719,
+    "top_token_id": 783,
+    "top_token": " now"
+   },
+   "target_ids": [
+    6342,
+    10598
+   ],
+   "clean_str_tokens": [
+    "<|endoftext|>",
+    "The",
+    " capital",
+    " of",
+    " France",
+    " is"
+   ],
+   "corrupted_str_tokens": [
+    "<|endoftext|>",
+    "The",
+    " capital",
+    " of",
+    " Italy",
+    " is"
+   ]
+  },
+  {
+   "pair": 1,
+   "clean": {
+    "target_logits": [
+     -101.1750717163086,
+     -105.09581756591797
+    ],
+    "logsumexp": -95.98056030273438,
+    "top_token_id": 783,
+    "top_token": " now"
+   },
+   "corrupted": {
+    "target_logits": [
+     -106.53992462158203,
+     -102.51446533203125
+    ],
+    "logsumexp": -98.18643188476562,
+    "top_token_id": 262,
+    "top_token": " the"
+   },
+   "target_ids": [
+    11307,
+    14708
+   ],
+   "clean_str_tokens": [
+    "<|endoftext|>",
+    "The",
+    " capital",
+    " of",
+    " Germany",
+    " is"
+   ],
+   "corrupted_str_tokens": [
+    "<|endoftext|>",
+    "The",
+    " capital",
+    " of",
+    " Spain",
+    " is"
+   ]
+  },
+  {
+   "pair": 2,
+   "clean": {
+    "target_logits": [
+     -103.8267593383789,
+     -107.24884033203125
+    ],
+    "logsumexp": -98.76860809326172,
+    "top_token_id": 1363,
+    "top_token": " home"
+   },
+   "corrupted": {
+    "target_logits": [
+     -108.25130462646484,
+     -105.4350357055664
+    ],
+    "logsumexp": -99.85729217529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   },
+   "target_ids": [
+    11790,
+    11618
+   ],
+   "clean_str_tokens": [
+    "<|endoftext|>",
+    "The",
+    " capital",
+    " of",
+    " Japan",
+    " is"
+   ],
+   "corrupted_str_tokens": [
+    "<|endoftext|>",
+    "The",
+    " capital",
+    " of",
+    " China",
+    " is"
+   ]
+  }
+ ],
+ "records": [
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 0,
+   "position": 0,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.07563781738281,
+     -98.65827178955078
+    ],
+    "logsumexp": -94.47563171386719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 0,
+   "position": 1,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.07563781738281,
+     -98.65827178955078
+    ],
+    "logsumexp": -94.47563171386719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 0,
+   "position": 2,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.07563781738281,
+     -98.65827178955078
+    ],
+    "logsumexp": -94.47563171386719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 0,
+   "position": 3,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.07563781738281,
+     -98.65827178955078
+    ],
+    "logsumexp": -94.47563171386719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 0,
+   "position": 4,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -105.43570709228516,
+     -106.84064483642578
+    ],
+    "logsumexp": -99.01591491699219,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 0,
+   "position": 5,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.07563781738281,
+     -98.65827178955078
+    ],
+    "logsumexp": -94.47563171386719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 1,
+   "position": 0,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.07563781738281,
+     -98.65827178955078
+    ],
+    "logsumexp": -94.47563171386719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 1,
+   "position": 1,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.07563781738281,
+     -98.65827178955078
+    ],
+    "logsumexp": -94.47563171386719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 1,
+   "position": 2,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.07563781738281,
+     -98.65827178955078
+    ],
+    "logsumexp": -94.47563171386719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 1,
+   "position": 3,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.07563781738281,
+     -98.65827178955078
+    ],
+    "logsumexp": -94.47563171386719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 1,
+   "position": 4,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -105.45655059814453,
+     -106.84423065185547
+    ],
+    "logsumexp": -98.98770141601562,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 1,
+   "position": 5,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.14115905761719,
+     -98.6849365234375
+    ],
+    "logsumexp": -94.54737854003906,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 2,
+   "position": 0,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.07563781738281,
+     -98.65827178955078
+    ],
+    "logsumexp": -94.47563171386719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 2,
+   "position": 1,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.07563781738281,
+     -98.65827178955078
+    ],
+    "logsumexp": -94.47563171386719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 2,
+   "position": 2,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.07563781738281,
+     -98.65827178955078
+    ],
+    "logsumexp": -94.47563171386719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 2,
+   "position": 3,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.07563781738281,
+     -98.65827178955078
+    ],
+    "logsumexp": -94.47563171386719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 2,
+   "position": 4,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -105.38057708740234,
+     -106.77648162841797
+    ],
+    "logsumexp": -98.93952941894531,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 2,
+   "position": 5,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.2043685913086,
+     -98.76148223876953
+    ],
+    "logsumexp": -94.60087585449219,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 3,
+   "position": 0,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.07563781738281,
+     -98.65827178955078
+    ],
+    "logsumexp": -94.47563171386719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 3,
+   "position": 1,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.07563781738281,
+     -98.65827178955078
+    ],
+    "logsumexp": -94.47563171386719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 3,
+   "position": 2,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.07563781738281,
+     -98.65827178955078
+    ],
+    "logsumexp": -94.47563171386719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 3,
+   "position": 3,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.07563781738281,
+     -98.65827178955078
+    ],
+    "logsumexp": -94.47563171386719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 3,
+   "position": 4,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -105.27922821044922,
+     -106.68553161621094
+    ],
+    "logsumexp": -98.88245391845703,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 3,
+   "position": 5,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.2790756225586,
+     -98.86021423339844
+    ],
+    "logsumexp": -94.66075897216797,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 4,
+   "position": 0,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.07563781738281,
+     -98.65827178955078
+    ],
+    "logsumexp": -94.47563171386719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 4,
+   "position": 1,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.07563781738281,
+     -98.65827178955078
+    ],
+    "logsumexp": -94.47563171386719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 4,
+   "position": 2,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.07563781738281,
+     -98.65827178955078
+    ],
+    "logsumexp": -94.47563171386719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 4,
+   "position": 3,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.07563781738281,
+     -98.65827178955078
+    ],
+    "logsumexp": -94.47563171386719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 4,
+   "position": 4,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -105.00104522705078,
+     -106.37651824951172
+    ],
+    "logsumexp": -98.61839294433594,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 4,
+   "position": 5,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.50456237792969,
+     -99.09024810791016
+    ],
+    "logsumexp": -94.88819122314453,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 5,
+   "position": 0,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.07563781738281,
+     -98.65827178955078
+    ],
+    "logsumexp": -94.47563171386719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 5,
+   "position": 1,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.07563781738281,
+     -98.65827178955078
+    ],
+    "logsumexp": -94.47563171386719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 5,
+   "position": 2,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.07563781738281,
+     -98.65827178955078
+    ],
+    "logsumexp": -94.47563171386719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 5,
+   "position": 3,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.07563781738281,
+     -98.65827178955078
+    ],
+    "logsumexp": -94.47563171386719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 5,
+   "position": 4,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -104.30546569824219,
+     -105.7471923828125
+    ],
+    "logsumexp": -98.21586608886719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 5,
+   "position": 5,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -104.2326431274414,
+     -99.99453735351562
+    ],
+    "logsumexp": -95.4802017211914,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 6,
+   "position": 0,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.07563781738281,
+     -98.65827178955078
+    ],
+    "logsumexp": -94.47563171386719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 6,
+   "position": 1,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.07563781738281,
+     -98.65827178955078
+    ],
+    "logsumexp": -94.47563171386719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 6,
+   "position": 2,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.07563781738281,
+     -98.65827178955078
+    ],
+    "logsumexp": -94.47563171386719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 6,
+   "position": 3,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.07563781738281,
+     -98.65827178955078
+    ],
+    "logsumexp": -94.47563171386719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 6,
+   "position": 4,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -104.30037689208984,
+     -105.72021484375
+    ],
+    "logsumexp": -98.2293701171875,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 6,
+   "position": 5,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -104.2714614868164,
+     -100.0577392578125
+    ],
+    "logsumexp": -95.46827697753906,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 7,
+   "position": 0,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.07563781738281,
+     -98.65827178955078
+    ],
+    "logsumexp": -94.47563171386719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 7,
+   "position": 1,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.07563781738281,
+     -98.65827178955078
+    ],
+    "logsumexp": -94.47563171386719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 7,
+   "position": 2,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.07563781738281,
+     -98.65827178955078
+    ],
+    "logsumexp": -94.47563171386719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 7,
+   "position": 3,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.07563781738281,
+     -98.65827178955078
+    ],
+    "logsumexp": -94.47563171386719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 7,
+   "position": 4,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.65572357177734,
+     -104.92951202392578
+    ],
+    "logsumexp": -97.7549057006836,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 7,
+   "position": 5,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -104.8632583618164,
+     -100.88973999023438
+    ],
+    "logsumexp": -96.0026626586914,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 8,
+   "position": 0,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.07563781738281,
+     -98.65827178955078
+    ],
+    "logsumexp": -94.47563171386719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 8,
+   "position": 1,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.07563781738281,
+     -98.65827178955078
+    ],
+    "logsumexp": -94.47563171386719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 8,
+   "position": 2,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.07563781738281,
+     -98.65827178955078
+    ],
+    "logsumexp": -94.47563171386719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 8,
+   "position": 3,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.07563781738281,
+     -98.65827178955078
+    ],
+    "logsumexp": -94.47563171386719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 8,
+   "position": 4,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.55005645751953,
+     -104.8196792602539
+    ],
+    "logsumexp": -97.69284057617188,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 8,
+   "position": 5,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -104.96990966796875,
+     -101.01728820800781
+    ],
+    "logsumexp": -96.06927490234375,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 9,
+   "position": 0,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.07563781738281,
+     -98.65827178955078
+    ],
+    "logsumexp": -94.47563171386719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 9,
+   "position": 1,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.07563781738281,
+     -98.65827178955078
+    ],
+    "logsumexp": -94.47563171386719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 9,
+   "position": 2,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.07563781738281,
+     -98.65827178955078
+    ],
+    "logsumexp": -94.47563171386719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 9,
+   "position": 3,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.07563781738281,
+     -98.65827178955078
+    ],
+    "logsumexp": -94.47563171386719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 9,
+   "position": 4,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -104.17704010009766,
+     -104.82837677001953
+    ],
+    "logsumexp": -98.07658386230469,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 9,
+   "position": 5,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -104.65923309326172,
+     -101.12261962890625
+    ],
+    "logsumexp": -96.05665588378906,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 10,
+   "position": 0,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.07563781738281,
+     -98.65827178955078
+    ],
+    "logsumexp": -94.47563171386719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 10,
+   "position": 1,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.07563781738281,
+     -98.65827178955078
+    ],
+    "logsumexp": -94.47563171386719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 10,
+   "position": 2,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.07563781738281,
+     -98.65827178955078
+    ],
+    "logsumexp": -94.47563171386719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 10,
+   "position": 3,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.07563781738281,
+     -98.65827178955078
+    ],
+    "logsumexp": -94.47563171386719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 10,
+   "position": 4,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.32916259765625,
+     -100.59268188476562
+    ],
+    "logsumexp": -96.0028076171875,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 10,
+   "position": 5,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -105.16716766357422,
+     -104.8194351196289
+    ],
+    "logsumexp": -98.12753295898438,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 11,
+   "position": 0,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.07563781738281,
+     -98.65827178955078
+    ],
+    "logsumexp": -94.47563171386719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 11,
+   "position": 1,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.07563781738281,
+     -98.65827178955078
+    ],
+    "logsumexp": -94.47563171386719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 11,
+   "position": 2,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.07563781738281,
+     -98.65827178955078
+    ],
+    "logsumexp": -94.47563171386719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 11,
+   "position": 3,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.07563781738281,
+     -98.65827178955078
+    ],
+    "logsumexp": -94.47563171386719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 11,
+   "position": 4,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.46346282958984,
+     -99.7674331665039
+    ],
+    "logsumexp": -95.6107406616211,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "resid_pre",
+   "layer": 11,
+   "position": 5,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -104.65641021728516,
+     -105.20038604736328
+    ],
+    "logsumexp": -97.97844696044922,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 0,
+   "position": 0,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.53992462158203,
+     -102.51446533203125
+    ],
+    "logsumexp": -98.18643188476562,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 0,
+   "position": 1,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.53992462158203,
+     -102.51446533203125
+    ],
+    "logsumexp": -98.18643188476562,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 0,
+   "position": 2,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.53992462158203,
+     -102.51446533203125
+    ],
+    "logsumexp": -98.18643188476562,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 0,
+   "position": 3,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.53992462158203,
+     -102.51446533203125
+    ],
+    "logsumexp": -98.18643188476562,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 0,
+   "position": 4,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -101.1750717163086,
+     -105.09581756591797
+    ],
+    "logsumexp": -95.98056030273438,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 0,
+   "position": 5,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.53992462158203,
+     -102.51446533203125
+    ],
+    "logsumexp": -98.18643188476562,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 1,
+   "position": 0,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.53992462158203,
+     -102.51446533203125
+    ],
+    "logsumexp": -98.18643188476562,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 1,
+   "position": 1,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.53992462158203,
+     -102.51446533203125
+    ],
+    "logsumexp": -98.18643188476562,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 1,
+   "position": 2,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.53992462158203,
+     -102.51446533203125
+    ],
+    "logsumexp": -98.18643188476562,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 1,
+   "position": 3,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.53992462158203,
+     -102.51446533203125
+    ],
+    "logsumexp": -98.18643188476562,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 1,
+   "position": 4,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -100.73650360107422,
+     -104.69574737548828
+    ],
+    "logsumexp": -95.62737274169922,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 1,
+   "position": 5,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.89667510986328,
+     -102.93958282470703
+    ],
+    "logsumexp": -98.5161361694336,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 2,
+   "position": 0,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.53992462158203,
+     -102.51446533203125
+    ],
+    "logsumexp": -98.18643188476562,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 2,
+   "position": 1,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.53992462158203,
+     -102.51446533203125
+    ],
+    "logsumexp": -98.18643188476562,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 2,
+   "position": 2,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.53992462158203,
+     -102.51446533203125
+    ],
+    "logsumexp": -98.18643188476562,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 2,
+   "position": 3,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.53992462158203,
+     -102.51446533203125
+    ],
+    "logsumexp": -98.18643188476562,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 2,
+   "position": 4,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -100.68057250976562,
+     -104.59408569335938
+    ],
+    "logsumexp": -95.50541687011719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 2,
+   "position": 5,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.96012115478516,
+     -102.97833251953125
+    ],
+    "logsumexp": -98.64396667480469,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 3,
+   "position": 0,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.53992462158203,
+     -102.51446533203125
+    ],
+    "logsumexp": -98.18643188476562,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 3,
+   "position": 1,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.53992462158203,
+     -102.51446533203125
+    ],
+    "logsumexp": -98.18643188476562,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 3,
+   "position": 2,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.53992462158203,
+     -102.51446533203125
+    ],
+    "logsumexp": -98.18643188476562,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 3,
+   "position": 3,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.53992462158203,
+     -102.51446533203125
+    ],
+    "logsumexp": -98.18643188476562,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 3,
+   "position": 4,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -100.33745574951172,
+     -104.27901458740234
+    ],
+    "logsumexp": -95.2568588256836,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 3,
+   "position": 5,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -107.261962890625,
+     -103.38671112060547
+    ],
+    "logsumexp": -98.92058563232422,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 4,
+   "position": 0,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.53992462158203,
+     -102.51446533203125
+    ],
+    "logsumexp": -98.18643188476562,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 4,
+   "position": 1,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.53992462158203,
+     -102.51446533203125
+    ],
+    "logsumexp": -98.18643188476562,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 4,
+   "position": 2,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.53992462158203,
+     -102.51446533203125
+    ],
+    "logsumexp": -98.18643188476562,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 4,
+   "position": 3,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.53992462158203,
+     -102.51446533203125
+    ],
+    "logsumexp": -98.18643188476562,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 4,
+   "position": 4,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -100.3973617553711,
+     -104.25623321533203
+    ],
+    "logsumexp": -95.2849349975586,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 4,
+   "position": 5,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -107.22880554199219,
+     -103.37971496582031
+    ],
+    "logsumexp": -98.9495620727539,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 5,
+   "position": 0,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.53992462158203,
+     -102.51446533203125
+    ],
+    "logsumexp": -98.18643188476562,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 5,
+   "position": 1,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.53992462158203,
+     -102.51446533203125
+    ],
+    "logsumexp": -98.18643188476562,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 5,
+   "position": 2,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.53992462158203,
+     -102.51446533203125
+    ],
+    "logsumexp": -98.18643188476562,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 5,
+   "position": 3,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.53992462158203,
+     -102.51446533203125
+    ],
+    "logsumexp": -98.18643188476562,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 5,
+   "position": 4,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -100.02983093261719,
+     -104.01825714111328
+    ],
+    "logsumexp": -95.2000732421875,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 5,
+   "position": 5,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -107.40074920654297,
+     -103.74881744384766
+    ],
+    "logsumexp": -98.99230194091797,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 6,
+   "position": 0,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.53992462158203,
+     -102.51446533203125
+    ],
+    "logsumexp": -98.18643188476562,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 6,
+   "position": 1,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.53992462158203,
+     -102.51446533203125
+    ],
+    "logsumexp": -98.18643188476562,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 6,
+   "position": 2,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.53992462158203,
+     -102.51446533203125
+    ],
+    "logsumexp": -98.18643188476562,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 6,
+   "position": 3,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.53992462158203,
+     -102.51446533203125
+    ],
+    "logsumexp": -98.18643188476562,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 6,
+   "position": 4,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -99.78263854980469,
+     -103.81231689453125
+    ],
+    "logsumexp": -95.01347351074219,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 6,
+   "position": 5,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -107.61720275878906,
+     -104.14701080322266
+    ],
+    "logsumexp": -99.19406127929688,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 7,
+   "position": 0,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.53992462158203,
+     -102.51446533203125
+    ],
+    "logsumexp": -98.18643188476562,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 7,
+   "position": 1,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.53992462158203,
+     -102.51446533203125
+    ],
+    "logsumexp": -98.18643188476562,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 7,
+   "position": 2,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.53992462158203,
+     -102.51446533203125
+    ],
+    "logsumexp": -98.18643188476562,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 7,
+   "position": 3,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.53992462158203,
+     -102.51446533203125
+    ],
+    "logsumexp": -98.18643188476562,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 7,
+   "position": 4,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -100.40685272216797,
+     -104.2957763671875
+    ],
+    "logsumexp": -95.7437744140625,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 7,
+   "position": 5,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -107.04515075683594,
+     -103.75282287597656
+    ],
+    "logsumexp": -98.67146301269531,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 8,
+   "position": 0,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.53992462158203,
+     -102.51446533203125
+    ],
+    "logsumexp": -98.18643188476562,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 8,
+   "position": 1,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.53992462158203,
+     -102.51446533203125
+    ],
+    "logsumexp": -98.18643188476562,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 8,
+   "position": 2,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.53992462158203,
+     -102.51446533203125
+    ],
+    "logsumexp": -98.18643188476562,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 8,
+   "position": 3,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.53992462158203,
+     -102.51446533203125
+    ],
+    "logsumexp": -98.18643188476562,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 8,
+   "position": 4,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -100.174560546875,
+     -104.0945053100586
+    ],
+    "logsumexp": -95.58038330078125,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 8,
+   "position": 5,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -107.20049285888672,
+     -103.99786376953125
+    ],
+    "logsumexp": -98.80094909667969,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 9,
+   "position": 0,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.53992462158203,
+     -102.51446533203125
+    ],
+    "logsumexp": -98.18643188476562,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 9,
+   "position": 1,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.53992462158203,
+     -102.51446533203125
+    ],
+    "logsumexp": -98.18643188476562,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 9,
+   "position": 2,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.53992462158203,
+     -102.51446533203125
+    ],
+    "logsumexp": -98.18643188476562,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 9,
+   "position": 3,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.53992462158203,
+     -102.51446533203125
+    ],
+    "logsumexp": -98.18643188476562,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 9,
+   "position": 4,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -101.69477081298828,
+     -104.96599578857422
+    ],
+    "logsumexp": -96.82510375976562,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 9,
+   "position": 5,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.18074035644531,
+     -103.30245971679688
+    ],
+    "logsumexp": -98.21488952636719,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 10,
+   "position": 0,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.53992462158203,
+     -102.51446533203125
+    ],
+    "logsumexp": -98.18643188476562,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 10,
+   "position": 1,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.53992462158203,
+     -102.51446533203125
+    ],
+    "logsumexp": -98.18643188476562,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 10,
+   "position": 2,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.53992462158203,
+     -102.51446533203125
+    ],
+    "logsumexp": -98.18643188476562,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 10,
+   "position": 3,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.53992462158203,
+     -102.51446533203125
+    ],
+    "logsumexp": -98.18643188476562,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 10,
+   "position": 4,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -104.80169677734375,
+     -102.93453979492188
+    ],
+    "logsumexp": -97.94319152832031,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 10,
+   "position": 5,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -102.89681243896484,
+     -104.44844818115234
+    ],
+    "logsumexp": -97.49535369873047,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 11,
+   "position": 0,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.53992462158203,
+     -102.51446533203125
+    ],
+    "logsumexp": -98.18643188476562,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 11,
+   "position": 1,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.53992462158203,
+     -102.51446533203125
+    ],
+    "logsumexp": -98.18643188476562,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 11,
+   "position": 2,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.53992462158203,
+     -102.51446533203125
+    ],
+    "logsumexp": -98.18643188476562,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 11,
+   "position": 3,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.53992462158203,
+     -102.51446533203125
+    ],
+    "logsumexp": -98.18643188476562,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 11,
+   "position": 4,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -105.337646484375,
+     -102.16967010498047
+    ],
+    "logsumexp": -97.67569732666016,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "resid_pre",
+   "layer": 11,
+   "position": 5,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -101.90116119384766,
+     -104.55927276611328
+    ],
+    "logsumexp": -96.73158264160156,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 0,
+   "position": 0,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -108.25130462646484,
+     -105.4350357055664
+    ],
+    "logsumexp": -99.85729217529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 0,
+   "position": 1,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -108.25130462646484,
+     -105.4350357055664
+    ],
+    "logsumexp": -99.85729217529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 0,
+   "position": 2,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -108.25130462646484,
+     -105.4350357055664
+    ],
+    "logsumexp": -99.85729217529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 0,
+   "position": 3,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -108.25130462646484,
+     -105.4350357055664
+    ],
+    "logsumexp": -99.85729217529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 0,
+   "position": 4,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -103.8267593383789,
+     -107.24884033203125
+    ],
+    "logsumexp": -98.76860809326172,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 0,
+   "position": 5,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -108.25130462646484,
+     -105.4350357055664
+    ],
+    "logsumexp": -99.85729217529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 1,
+   "position": 0,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -108.25130462646484,
+     -105.4350357055664
+    ],
+    "logsumexp": -99.85729217529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 1,
+   "position": 1,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -108.25130462646484,
+     -105.4350357055664
+    ],
+    "logsumexp": -99.85729217529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 1,
+   "position": 2,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -108.25130462646484,
+     -105.4350357055664
+    ],
+    "logsumexp": -99.85729217529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 1,
+   "position": 3,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -108.25130462646484,
+     -105.4350357055664
+    ],
+    "logsumexp": -99.85729217529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 1,
+   "position": 4,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -104.12200927734375,
+     -107.45912170410156
+    ],
+    "logsumexp": -98.97804260253906,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 1,
+   "position": 5,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -108.01765441894531,
+     -105.2008285522461
+    ],
+    "logsumexp": -99.65847778320312,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 2,
+   "position": 0,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -108.25130462646484,
+     -105.4350357055664
+    ],
+    "logsumexp": -99.85729217529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 2,
+   "position": 1,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -108.25130462646484,
+     -105.4350357055664
+    ],
+    "logsumexp": -99.85729217529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 2,
+   "position": 2,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -108.25130462646484,
+     -105.4350357055664
+    ],
+    "logsumexp": -99.85729217529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 2,
+   "position": 3,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -108.25130462646484,
+     -105.4350357055664
+    ],
+    "logsumexp": -99.85729217529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 2,
+   "position": 4,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -104.4808349609375,
+     -107.6771240234375
+    ],
+    "logsumexp": -99.17806243896484,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 2,
+   "position": 5,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -107.8255615234375,
+     -105.01703643798828
+    ],
+    "logsumexp": -99.53871154785156,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 3,
+   "position": 0,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -108.25130462646484,
+     -105.4350357055664
+    ],
+    "logsumexp": -99.85729217529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 3,
+   "position": 1,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -108.25130462646484,
+     -105.4350357055664
+    ],
+    "logsumexp": -99.85729217529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 3,
+   "position": 2,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -108.25130462646484,
+     -105.4350357055664
+    ],
+    "logsumexp": -99.85729217529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 3,
+   "position": 3,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -108.25130462646484,
+     -105.4350357055664
+    ],
+    "logsumexp": -99.85729217529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 3,
+   "position": 4,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -104.8704605102539,
+     -107.8742904663086
+    ],
+    "logsumexp": -99.3406982421875,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 3,
+   "position": 5,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -107.56275939941406,
+     -104.7478256225586
+    ],
+    "logsumexp": -99.36422729492188,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 4,
+   "position": 0,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -108.25130462646484,
+     -105.4350357055664
+    ],
+    "logsumexp": -99.85729217529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 4,
+   "position": 1,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -108.25130462646484,
+     -105.4350357055664
+    ],
+    "logsumexp": -99.85729217529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 4,
+   "position": 2,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -108.25130462646484,
+     -105.4350357055664
+    ],
+    "logsumexp": -99.85729217529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 4,
+   "position": 3,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -108.25130462646484,
+     -105.4350357055664
+    ],
+    "logsumexp": -99.85729217529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 4,
+   "position": 4,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -104.7040023803711,
+     -107.69024658203125
+    ],
+    "logsumexp": -99.17037200927734,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 4,
+   "position": 5,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -107.711669921875,
+     -104.89937591552734
+    ],
+    "logsumexp": -99.54638671875,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 5,
+   "position": 0,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -108.25130462646484,
+     -105.4350357055664
+    ],
+    "logsumexp": -99.85729217529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 5,
+   "position": 1,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -108.25130462646484,
+     -105.4350357055664
+    ],
+    "logsumexp": -99.85729217529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 5,
+   "position": 2,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -108.25130462646484,
+     -105.4350357055664
+    ],
+    "logsumexp": -99.85729217529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 5,
+   "position": 3,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -108.25130462646484,
+     -105.4350357055664
+    ],
+    "logsumexp": -99.85729217529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 5,
+   "position": 4,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -104.39683532714844,
+     -107.5615463256836
+    ],
+    "logsumexp": -99.2261734008789,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 5,
+   "position": 5,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -107.80149841308594,
+     -105.033203125
+    ],
+    "logsumexp": -99.5174331665039,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 6,
+   "position": 0,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -108.25130462646484,
+     -105.4350357055664
+    ],
+    "logsumexp": -99.85729217529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 6,
+   "position": 1,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -108.25130462646484,
+     -105.4350357055664
+    ],
+    "logsumexp": -99.85729217529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 6,
+   "position": 2,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -108.25130462646484,
+     -105.4350357055664
+    ],
+    "logsumexp": -99.85729217529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 6,
+   "position": 3,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -108.25130462646484,
+     -105.4350357055664
+    ],
+    "logsumexp": -99.85729217529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 6,
+   "position": 4,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -104.4979476928711,
+     -107.5241928100586
+    ],
+    "logsumexp": -99.25940704345703,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 6,
+   "position": 5,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -107.56599426269531,
+     -104.78813934326172
+    ],
+    "logsumexp": -99.2545166015625,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 7,
+   "position": 0,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -108.25130462646484,
+     -105.4350357055664
+    ],
+    "logsumexp": -99.85729217529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 7,
+   "position": 1,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -108.25130462646484,
+     -105.4350357055664
+    ],
+    "logsumexp": -99.85729217529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 7,
+   "position": 2,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -108.25130462646484,
+     -105.4350357055664
+    ],
+    "logsumexp": -99.85729217529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 7,
+   "position": 3,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -108.25130462646484,
+     -105.4350357055664
+    ],
+    "logsumexp": -99.85729217529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 7,
+   "position": 4,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -104.60736846923828,
+     -107.4500961303711
+    ],
+    "logsumexp": -99.32304382324219,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 7,
+   "position": 5,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -107.48418426513672,
+     -104.84872436523438
+    ],
+    "logsumexp": -99.333251953125,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 8,
+   "position": 0,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -108.25130462646484,
+     -105.4350357055664
+    ],
+    "logsumexp": -99.85729217529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 8,
+   "position": 1,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -108.25130462646484,
+     -105.4350357055664
+    ],
+    "logsumexp": -99.85729217529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 8,
+   "position": 2,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -108.25130462646484,
+     -105.4350357055664
+    ],
+    "logsumexp": -99.85729217529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 8,
+   "position": 3,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -108.25130462646484,
+     -105.4350357055664
+    ],
+    "logsumexp": -99.85729217529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 8,
+   "position": 4,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -104.8198013305664,
+     -107.64458465576172
+    ],
+    "logsumexp": -99.57722473144531,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 8,
+   "position": 5,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -107.33299255371094,
+     -104.74412536621094
+    ],
+    "logsumexp": -99.17454528808594,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 9,
+   "position": 0,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -108.25130462646484,
+     -105.4350357055664
+    ],
+    "logsumexp": -99.85729217529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 9,
+   "position": 1,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -108.25130462646484,
+     -105.4350357055664
+    ],
+    "logsumexp": -99.85729217529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 9,
+   "position": 2,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -108.25130462646484,
+     -105.4350357055664
+    ],
+    "logsumexp": -99.85729217529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 9,
+   "position": 3,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -108.25130462646484,
+     -105.4350357055664
+    ],
+    "logsumexp": -99.85729217529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 9,
+   "position": 4,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -105.19561767578125,
+     -107.57344818115234
+    ],
+    "logsumexp": -99.87860107421875,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 9,
+   "position": 5,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.62718963623047,
+     -104.42405700683594
+    ],
+    "logsumexp": -98.74256896972656,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 10,
+   "position": 0,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -108.25130462646484,
+     -105.4350357055664
+    ],
+    "logsumexp": -99.85729217529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 10,
+   "position": 1,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -108.25130462646484,
+     -105.4350357055664
+    ],
+    "logsumexp": -99.85729217529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 10,
+   "position": 2,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -108.25130462646484,
+     -105.4350357055664
+    ],
+    "logsumexp": -99.85729217529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 10,
+   "position": 3,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -108.25130462646484,
+     -105.4350357055664
+    ],
+    "logsumexp": -99.85729217529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 10,
+   "position": 4,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.09053039550781,
+     -105.28948211669922
+    ],
+    "logsumexp": -99.59580993652344,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 10,
+   "position": 5,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -105.17268371582031,
+     -106.76644134521484
+    ],
+    "logsumexp": -99.55908966064453,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 11,
+   "position": 0,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -108.25130462646484,
+     -105.4350357055664
+    ],
+    "logsumexp": -99.85729217529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 11,
+   "position": 1,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -108.25130462646484,
+     -105.4350357055664
+    ],
+    "logsumexp": -99.85729217529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 11,
+   "position": 2,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -108.25130462646484,
+     -105.4350357055664
+    ],
+    "logsumexp": -99.85729217529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 11,
+   "position": 3,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -108.25130462646484,
+     -105.4350357055664
+    ],
+    "logsumexp": -99.85729217529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 11,
+   "position": 4,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -106.03540802001953,
+     -104.83338165283203
+    ],
+    "logsumexp": -99.22592163085938,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "resid_pre",
+   "layer": 11,
+   "position": 5,
+   "head": null,
+   "readout": {
+    "target_logits": [
+     -104.50859069824219,
+     -106.8785400390625
+    ],
+    "logsumexp": -99.2481689453125,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  }
+ ],
+ "metadata": {
+  "model": "openai-community/gpt2",
+  "device": "cpu",
+  "dtype": "torch.float32",
+  "versions": {
+   "torch": "2.15.0",
+   "transformer-lens": "4.3.0",
+   "transformers": "5.22.2"
+  },
+  "python": "3.13.1",
+  "n_forward_passes": 222,
+  "seconds": 5.547,
+  "created": "2026-11-09T13:39:16-0800"
+ }
+}

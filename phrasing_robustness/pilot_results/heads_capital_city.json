@@ -1,0 +1,7094 @@
+{
+ "config": {
+  "components": [
+   "z"
+  ],
+  "layers": null,
+  "positions": [
+   -1
+  ],
+  "per_position": true,
+  "per_head": true,
+  "readout_position": -1,
+  "prepend_bos": true
+ },
+ "pairs": [
+  {
+   "clean": "The capital city of France is",
+   "corrupted": "The capital city of Italy is",
+   "clean_target": " Paris",
+   "corrupted_target": " Rome"
+  },
+  {
+   "clean": "The capital city of Germany is",
+   "corrupted": "The capital city of Spain is",
+   "clean_target": " Berlin",
+   "corrupted_target": " Madrid"
+  },
+  {
+   "clean": "The capital city of Japan is",
+   "corrupted": "The capital city of China is",
+   "clean_target": " Tokyo",
+   "corrupted_target": " Beijing"
+  }
+ ],
+ "baselines": [
+  {
+   "pair": 0,
+   "clean": {
+    "target_logits": [
+     -111.26190948486328,
+     -111.78482055664062
+    ],
+    "logsumexp": -102.62433624267578,
+    "top_token_id": 783,
+    "top_token": " now"
+   },
+   "corrupted": {
+    "target_logits": [
+     -109.59529113769531,
+     -106.37065124511719
+    ],
+    "logsumexp": -99.65818786621094,
+    "top_token_id": 1363,
+    "top_token": " home"
+   },
+   "target_ids": [
+    6342,
+    10598
+   ],
+   "clean_str_tokens": [
+    "<|endoftext|>",
+    "The",
+    " capital",
+    " city",
+    " of",
+    " France",
+    " is"
+   ],
+   "corrupted_str_tokens": [
+    "<|endoftext|>",
+    "The",
+    " capital",
+    " city",
+    " of",
+    " Italy",
+    " is"
+   ]
+  },
+  {
+   "pair": 1,
+   "clean": {
+    "target_logits": [
+     -109.3449478149414,
+     -112.04354095458984
+    ],
+    "logsumexp": -101.53565216064453,
+    "top_token_id": 783,
+    "top_token": " now"
+   },
+   "corrupted": {
+    "target_logits": [
+     -112.31898498535156,
+     -110.33218383789062
+    ],
+    "logsumexp": -102.65071105957031,
+    "top_token_id": 783,
+    "top_token": " now"
+   },
+   "target_ids": [
+    11307,
+    14708
+   ],
+   "clean_str_tokens": [
+    "<|endoftext|>",
+    "The",
+    " capital",
+    " city",
+    " of",
+    " Germany",
+    " is"
+   ],
+   "corrupted_str_tokens": [
+    "<|endoftext|>",
+    "The",
+    " capital",
+    " city",
+    " of",
+    " Spain",
+    " is"
+   ]
+  },
+  {
+   "pair": 2,
+   "clean": {
+    "target_logits": [
+     -109.2352066040039,
+     -111.40385437011719
+    ],
+    "logsumexp": -102.05440521240234,
+    "top_token_id": 1363,
+    "top_token": " home"
+   },
+   "corrupted": {
+    "target_logits": [
+     -112.27613830566406,
+     -110.31936645507812
+    ],
+    "logsumexp": -102.9825439453125,
+    "top_token_id": 1363,
+    "top_token": " home"
+   },
+   "target_ids": [
+    11790,
+    11618
+   ],
+   "clean_str_tokens": [
+    "<|endoftext|>",
+    "The",
+    " capital",
+    " city",
+    " of",
+    " Japan",
+    " is"
+   ],
+   "corrupted_str_tokens": [
+    "<|endoftext|>",
+    "The",
+    " capital",
+    " city",
+    " of",
+    " China",
+    " is"
+   ]
+  }
+ ],
+ "records": [
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 0,
+   "position": 6,
+   "head": 0,
+   "readout": {
+    "target_logits": [
+     -109.59596252441406,
+     -106.37118530273438
+    ],
+    "logsumexp": -99.65926361083984,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 0,
+   "position": 6,
+   "head": 1,
+   "readout": {
+    "target_logits": [
+     -109.5951919555664,
+     -106.37059020996094
+    ],
+    "logsumexp": -99.65808868408203,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 0,
+   "position": 6,
+   "head": 2,
+   "readout": {
+    "target_logits": [
+     -109.60160064697266,
+     -106.37523651123047
+    ],
+    "logsumexp": -99.6656265258789,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 0,
+   "position": 6,
+   "head": 3,
+   "readout": {
+    "target_logits": [
+     -109.58988952636719,
+     -106.36478424072266
+    ],
+    "logsumexp": -99.65354919433594,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 0,
+   "position": 6,
+   "head": 4,
+   "readout": {
+    "target_logits": [
+     -109.58627319335938,
+     -106.35908508300781
+    ],
+    "logsumexp": -99.65887451171875,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 0,
+   "position": 6,
+   "head": 5,
+   "readout": {
+    "target_logits": [
+     -109.59532165527344,
+     -106.37068176269531
+    ],
+    "logsumexp": -99.658203125,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 0,
+   "position": 6,
+   "head": 6,
+   "readout": {
+    "target_logits": [
+     -109.56016540527344,
+     -106.31015014648438
+    ],
+    "logsumexp": -99.63306427001953,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 0,
+   "position": 6,
+   "head": 7,
+   "readout": {
+    "target_logits": [
+     -109.59757232666016,
+     -106.3597412109375
+    ],
+    "logsumexp": -99.67337799072266,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 0,
+   "position": 6,
+   "head": 8,
+   "readout": {
+    "target_logits": [
+     -109.58589935302734,
+     -106.36277770996094
+    ],
+    "logsumexp": -99.6494140625,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 0,
+   "position": 6,
+   "head": 9,
+   "readout": {
+    "target_logits": [
+     -109.6326904296875,
+     -106.42021942138672
+    ],
+    "logsumexp": -99.6768798828125,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 0,
+   "position": 6,
+   "head": 10,
+   "readout": {
+    "target_logits": [
+     -109.53795623779297,
+     -106.3118896484375
+    ],
+    "logsumexp": -99.6083984375,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 0,
+   "position": 6,
+   "head": 11,
+   "readout": {
+    "target_logits": [
+     -109.65276336669922,
+     -106.4256820678711
+    ],
+    "logsumexp": -99.71385192871094,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 1,
+   "position": 6,
+   "head": 0,
+   "readout": {
+    "target_logits": [
+     -109.57554626464844,
+     -106.34739685058594
+    ],
+    "logsumexp": -99.65007781982422,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 1,
+   "position": 6,
+   "head": 1,
+   "readout": {
+    "target_logits": [
+     -109.6264419555664,
+     -106.4045181274414
+    ],
+    "logsumexp": -99.68299102783203,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 1,
+   "position": 6,
+   "head": 2,
+   "readout": {
+    "target_logits": [
+     -109.55564880371094,
+     -106.3275375366211
+    ],
+    "logsumexp": -99.6230697631836,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 1,
+   "position": 6,
+   "head": 3,
+   "readout": {
+    "target_logits": [
+     -109.62052917480469,
+     -106.40367126464844
+    ],
+    "logsumexp": -99.67658233642578,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 1,
+   "position": 6,
+   "head": 4,
+   "readout": {
+    "target_logits": [
+     -109.6180648803711,
+     -106.39512634277344
+    ],
+    "logsumexp": -99.67594909667969,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 1,
+   "position": 6,
+   "head": 5,
+   "readout": {
+    "target_logits": [
+     -109.5759506225586,
+     -106.3519515991211
+    ],
+    "logsumexp": -99.6408462524414,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 1,
+   "position": 6,
+   "head": 6,
+   "readout": {
+    "target_logits": [
+     -109.60022735595703,
+     -106.38043212890625
+    ],
+    "logsumexp": -99.65951538085938,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 1,
+   "position": 6,
+   "head": 7,
+   "readout": {
+    "target_logits": [
+     -109.61254119873047,
+     -106.39789581298828
+    ],
+    "logsumexp": -99.65673065185547,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 1,
+   "position": 6,
+   "head": 8,
+   "readout": {
+    "target_logits": [
+     -109.60368347167969,
+     -106.38947296142578
+    ],
+    "logsumexp": -99.65997314453125,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 1,
+   "position": 6,
+   "head": 9,
+   "readout": {
+    "target_logits": [
+     -109.59630584716797,
+     -106.3714599609375
+    ],
+    "logsumexp": -99.6578598022461,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 1,
+   "position": 6,
+   "head": 10,
+   "readout": {
+    "target_logits": [
+     -109.59967041015625,
+     -106.37020874023438
+    ],
+    "logsumexp": -99.66984558105469,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 1,
+   "position": 6,
+   "head": 11,
+   "readout": {
+    "target_logits": [
+     -109.56647491455078,
+     -106.3505630493164
+    ],
+    "logsumexp": -99.62590789794922,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 2,
+   "position": 6,
+   "head": 0,
+   "readout": {
+    "target_logits": [
+     -109.64366149902344,
+     -106.43348693847656
+    ],
+    "logsumexp": -99.68801879882812,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 2,
+   "position": 6,
+   "head": 1,
+   "readout": {
+    "target_logits": [
+     -109.69386291503906,
+     -106.48731231689453
+    ],
+    "logsumexp": -99.72432708740234,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 2,
+   "position": 6,
+   "head": 2,
+   "readout": {
+    "target_logits": [
+     -109.5831298828125,
+     -106.34668731689453
+    ],
+    "logsumexp": -99.69375610351562,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 2,
+   "position": 6,
+   "head": 3,
+   "readout": {
+    "target_logits": [
+     -109.60892486572266,
+     -106.38646697998047
+    ],
+    "logsumexp": -99.66773223876953,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 2,
+   "position": 6,
+   "head": 4,
+   "readout": {
+    "target_logits": [
+     -109.60260009765625,
+     -106.37820434570312
+    ],
+    "logsumexp": -99.66560363769531,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 2,
+   "position": 6,
+   "head": 5,
+   "readout": {
+    "target_logits": [
+     -109.55253601074219,
+     -106.32392883300781
+    ],
+    "logsumexp": -99.62419128417969,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 2,
+   "position": 6,
+   "head": 6,
+   "readout": {
+    "target_logits": [
+     -109.54818725585938,
+     -106.31681823730469
+    ],
+    "logsumexp": -99.61880493164062,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 2,
+   "position": 6,
+   "head": 7,
+   "readout": {
+    "target_logits": [
+     -109.54871368408203,
+     -106.30776977539062
+    ],
+    "logsumexp": -99.622802734375,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 2,
+   "position": 6,
+   "head": 8,
+   "readout": {
+    "target_logits": [
+     -109.58311462402344,
+     -106.35591125488281
+    ],
+    "logsumexp": -99.65008544921875,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 2,
+   "position": 6,
+   "head": 9,
+   "readout": {
+    "target_logits": [
+     -109.61559295654297,
+     -106.40632629394531
+    ],
+    "logsumexp": -99.65618133544922,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 2,
+   "position": 6,
+   "head": 10,
+   "readout": {
+    "target_logits": [
+     -109.62150573730469,
+     -106.40424346923828
+    ],
+    "logsumexp": -99.6749496459961,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 2,
+   "position": 6,
+   "head": 11,
+   "readout": {
+    "target_logits": [
+     -109.63996124267578,
+     -106.42713165283203
+    ],
+    "logsumexp": -99.6847915649414,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 3,
+   "position": 6,
+   "head": 0,
+   "readout": {
+    "target_logits": [
+     -109.5991439819336,
+     -106.37519073486328
+    ],
+    "logsumexp": -99.6611099243164,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 3,
+   "position": 6,
+   "head": 1,
+   "readout": {
+    "target_logits": [
+     -109.61307525634766,
+     -106.39187622070312
+    ],
+    "logsumexp": -99.67340087890625,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 3,
+   "position": 6,
+   "head": 2,
+   "readout": {
+    "target_logits": [
+     -109.6502685546875,
+     -106.43380737304688
+    ],
+    "logsumexp": -99.69754028320312,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 3,
+   "position": 6,
+   "head": 3,
+   "readout": {
+    "target_logits": [
+     -109.60272216796875,
+     -106.3809585571289
+    ],
+    "logsumexp": -99.66222381591797,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 3,
+   "position": 6,
+   "head": 4,
+   "readout": {
+    "target_logits": [
+     -109.60211181640625,
+     -106.37847900390625
+    ],
+    "logsumexp": -99.66277313232422,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 3,
+   "position": 6,
+   "head": 5,
+   "readout": {
+    "target_logits": [
+     -109.59453582763672,
+     -106.363037109375
+    ],
+    "logsumexp": -99.66358184814453,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 3,
+   "position": 6,
+   "head": 6,
+   "readout": {
+    "target_logits": [
+     -109.71477508544922,
+     -106.492919921875
+    ],
+    "logsumexp": -99.7685546875,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 3,
+   "position": 6,
+   "head": 7,
+   "readout": {
+    "target_logits": [
+     -109.61185455322266,
+     -106.38126373291016
+    ],
+    "logsumexp": -99.70118713378906,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 3,
+   "position": 6,
+   "head": 8,
+   "readout": {
+    "target_logits": [
+     -109.54508972167969,
+     -106.32258605957031
+    ],
+    "logsumexp": -99.61371612548828,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 3,
+   "position": 6,
+   "head": 9,
+   "readout": {
+    "target_logits": [
+     -109.57080078125,
+     -106.34001159667969
+    ],
+    "logsumexp": -99.64146423339844,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 3,
+   "position": 6,
+   "head": 10,
+   "readout": {
+    "target_logits": [
+     -109.50431823730469,
+     -106.22743225097656
+    ],
+    "logsumexp": -99.62130737304688,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 3,
+   "position": 6,
+   "head": 11,
+   "readout": {
+    "target_logits": [
+     -109.60652160644531,
+     -106.38819122314453
+    ],
+    "logsumexp": -99.66229248046875,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 4,
+   "position": 6,
+   "head": 0,
+   "readout": {
+    "target_logits": [
+     -109.5698013305664,
+     -106.33763885498047
+    ],
+    "logsumexp": -99.64405822753906,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 4,
+   "position": 6,
+   "head": 1,
+   "readout": {
+    "target_logits": [
+     -109.57364654541016,
+     -106.34485626220703
+    ],
+    "logsumexp": -99.6446304321289,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 4,
+   "position": 6,
+   "head": 2,
+   "readout": {
+    "target_logits": [
+     -109.59529876708984,
+     -106.37252807617188
+    ],
+    "logsumexp": -99.65715026855469,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 4,
+   "position": 6,
+   "head": 3,
+   "readout": {
+    "target_logits": [
+     -109.592529296875,
+     -106.36862182617188
+    ],
+    "logsumexp": -99.65376281738281,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 4,
+   "position": 6,
+   "head": 4,
+   "readout": {
+    "target_logits": [
+     -109.64378356933594,
+     -106.43656158447266
+    ],
+    "logsumexp": -99.68701171875,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 4,
+   "position": 6,
+   "head": 5,
+   "readout": {
+    "target_logits": [
+     -109.54238891601562,
+     -106.31233978271484
+    ],
+    "logsumexp": -99.61904907226562,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 4,
+   "position": 6,
+   "head": 6,
+   "readout": {
+    "target_logits": [
+     -109.71460723876953,
+     -106.53857421875
+    ],
+    "logsumexp": -99.74565887451172,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 4,
+   "position": 6,
+   "head": 7,
+   "readout": {
+    "target_logits": [
+     -109.67341613769531,
+     -106.46784210205078
+    ],
+    "logsumexp": -99.67371368408203,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 4,
+   "position": 6,
+   "head": 8,
+   "readout": {
+    "target_logits": [
+     -109.6268539428711,
+     -106.41483306884766
+    ],
+    "logsumexp": -99.67318725585938,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 4,
+   "position": 6,
+   "head": 9,
+   "readout": {
+    "target_logits": [
+     -109.61846160888672,
+     -106.39566802978516
+    ],
+    "logsumexp": -99.6802749633789,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 4,
+   "position": 6,
+   "head": 10,
+   "readout": {
+    "target_logits": [
+     -109.56998443603516,
+     -106.34147644042969
+    ],
+    "logsumexp": -99.63724517822266,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 4,
+   "position": 6,
+   "head": 11,
+   "readout": {
+    "target_logits": [
+     -110.02066040039062,
+     -106.87706756591797
+    ],
+    "logsumexp": -100.02637481689453,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 5,
+   "position": 6,
+   "head": 0,
+   "readout": {
+    "target_logits": [
+     -109.5818099975586,
+     -106.35566711425781
+    ],
+    "logsumexp": -99.64788818359375,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 5,
+   "position": 6,
+   "head": 1,
+   "readout": {
+    "target_logits": [
+     -109.59574127197266,
+     -106.37178802490234
+    ],
+    "logsumexp": -99.65821838378906,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 5,
+   "position": 6,
+   "head": 2,
+   "readout": {
+    "target_logits": [
+     -109.63581848144531,
+     -106.4268798828125
+    ],
+    "logsumexp": -99.67227935791016,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 5,
+   "position": 6,
+   "head": 3,
+   "readout": {
+    "target_logits": [
+     -109.6442642211914,
+     -106.43045806884766
+    ],
+    "logsumexp": -99.68596649169922,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 5,
+   "position": 6,
+   "head": 4,
+   "readout": {
+    "target_logits": [
+     -109.59217071533203,
+     -106.35946655273438
+    ],
+    "logsumexp": -99.65898895263672,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 5,
+   "position": 6,
+   "head": 5,
+   "readout": {
+    "target_logits": [
+     -109.60794067382812,
+     -106.38593292236328
+    ],
+    "logsumexp": -99.66734313964844,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 5,
+   "position": 6,
+   "head": 6,
+   "readout": {
+    "target_logits": [
+     -109.6085433959961,
+     -106.38868713378906
+    ],
+    "logsumexp": -99.6644287109375,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 5,
+   "position": 6,
+   "head": 7,
+   "readout": {
+    "target_logits": [
+     -109.68431854248047,
+     -106.49844360351562
+    ],
+    "logsumexp": -99.71854400634766,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 5,
+   "position": 6,
+   "head": 8,
+   "readout": {
+    "target_logits": [
+     -109.5946044921875,
+     -106.36872100830078
+    ],
+    "logsumexp": -99.66034698486328,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 5,
+   "position": 6,
+   "head": 9,
+   "readout": {
+    "target_logits": [
+     -109.60193634033203,
+     -106.38200378417969
+    ],
+    "logsumexp": -99.66046142578125,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 5,
+   "position": 6,
+   "head": 10,
+   "readout": {
+    "target_logits": [
+     -109.703857421875,
+     -106.4989242553711
+    ],
+    "logsumexp": -99.76546478271484,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 5,
+   "position": 6,
+   "head": 11,
+   "readout": {
+    "target_logits": [
+     -109.51648712158203,
+     -106.29695129394531
+    ],
+    "logsumexp": -99.5324935913086,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 6,
+   "position": 6,
+   "head": 0,
+   "readout": {
+    "target_logits": [
+     -109.61548614501953,
+     -106.38410186767578
+    ],
+    "logsumexp": -99.6766357421875,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 6,
+   "position": 6,
+   "head": 1,
+   "readout": {
+    "target_logits": [
+     -109.59928131103516,
+     -106.38400268554688
+    ],
+    "logsumexp": -99.64444732666016,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 6,
+   "position": 6,
+   "head": 2,
+   "readout": {
+    "target_logits": [
+     -109.5956039428711,
+     -106.38543701171875
+    ],
+    "logsumexp": -99.6490249633789,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 6,
+   "position": 6,
+   "head": 3,
+   "readout": {
+    "target_logits": [
+     -109.81071472167969,
+     -106.60652923583984
+    ],
+    "logsumexp": -99.82697296142578,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 6,
+   "position": 6,
+   "head": 4,
+   "readout": {
+    "target_logits": [
+     -109.56855773925781,
+     -106.56106567382812
+    ],
+    "logsumexp": -99.62850189208984,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 6,
+   "position": 6,
+   "head": 5,
+   "readout": {
+    "target_logits": [
+     -109.60796356201172,
+     -106.39633178710938
+    ],
+    "logsumexp": -99.63887023925781,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 6,
+   "position": 6,
+   "head": 6,
+   "readout": {
+    "target_logits": [
+     -109.61231994628906,
+     -106.38533782958984
+    ],
+    "logsumexp": -99.678955078125,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 6,
+   "position": 6,
+   "head": 7,
+   "readout": {
+    "target_logits": [
+     -109.59955596923828,
+     -106.39657592773438
+    ],
+    "logsumexp": -99.64386749267578,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 6,
+   "position": 6,
+   "head": 8,
+   "readout": {
+    "target_logits": [
+     -109.7122573852539,
+     -106.5002212524414
+    ],
+    "logsumexp": -99.75993347167969,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 6,
+   "position": 6,
+   "head": 9,
+   "readout": {
+    "target_logits": [
+     -109.59454345703125,
+     -106.37108612060547
+    ],
+    "logsumexp": -99.65762329101562,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 6,
+   "position": 6,
+   "head": 10,
+   "readout": {
+    "target_logits": [
+     -109.62800598144531,
+     -106.4001235961914
+    ],
+    "logsumexp": -99.69107818603516,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 6,
+   "position": 6,
+   "head": 11,
+   "readout": {
+    "target_logits": [
+     -109.58000946044922,
+     -106.35661315917969
+    ],
+    "logsumexp": -99.6465835571289,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 7,
+   "position": 6,
+   "head": 0,
+   "readout": {
+    "target_logits": [
+     -109.60662078857422,
+     -106.38511657714844
+    ],
+    "logsumexp": -99.66681671142578,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 7,
+   "position": 6,
+   "head": 1,
+   "readout": {
+    "target_logits": [
+     -109.58781433105469,
+     -106.36306762695312
+    ],
+    "logsumexp": -99.65538024902344,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 7,
+   "position": 6,
+   "head": 2,
+   "readout": {
+    "target_logits": [
+     -109.59589385986328,
+     -106.37286376953125
+    ],
+    "logsumexp": -99.65904235839844,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 7,
+   "position": 6,
+   "head": 3,
+   "readout": {
+    "target_logits": [
+     -109.61700439453125,
+     -106.40294647216797
+    ],
+    "logsumexp": -99.65776062011719,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 7,
+   "position": 6,
+   "head": 4,
+   "readout": {
+    "target_logits": [
+     -109.63201904296875,
+     -106.41517639160156
+    ],
+    "logsumexp": -99.68437194824219,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 7,
+   "position": 6,
+   "head": 5,
+   "readout": {
+    "target_logits": [
+     -109.71125793457031,
+     -106.50006103515625
+    ],
+    "logsumexp": -99.76091766357422,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 7,
+   "position": 6,
+   "head": 6,
+   "readout": {
+    "target_logits": [
+     -109.62068939208984,
+     -106.41708374023438
+    ],
+    "logsumexp": -99.64346313476562,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 7,
+   "position": 6,
+   "head": 7,
+   "readout": {
+    "target_logits": [
+     -109.59629821777344,
+     -106.3711929321289
+    ],
+    "logsumexp": -99.65949249267578,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 7,
+   "position": 6,
+   "head": 8,
+   "readout": {
+    "target_logits": [
+     -109.55204772949219,
+     -106.33094024658203
+    ],
+    "logsumexp": -99.61200714111328,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 7,
+   "position": 6,
+   "head": 9,
+   "readout": {
+    "target_logits": [
+     -109.59660339355469,
+     -106.36431121826172
+    ],
+    "logsumexp": -99.66132354736328,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 7,
+   "position": 6,
+   "head": 10,
+   "readout": {
+    "target_logits": [
+     -109.59478759765625,
+     -106.37156677246094
+    ],
+    "logsumexp": -99.65757751464844,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 7,
+   "position": 6,
+   "head": 11,
+   "readout": {
+    "target_logits": [
+     -109.59563446044922,
+     -106.37084197998047
+    ],
+    "logsumexp": -99.65913391113281,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 8,
+   "position": 6,
+   "head": 0,
+   "readout": {
+    "target_logits": [
+     -109.58576202392578,
+     -106.35663604736328
+    ],
+    "logsumexp": -99.65235137939453,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 8,
+   "position": 6,
+   "head": 1,
+   "readout": {
+    "target_logits": [
+     -109.62002563476562,
+     -106.39825439453125
+    ],
+    "logsumexp": -99.67819213867188,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 8,
+   "position": 6,
+   "head": 2,
+   "readout": {
+    "target_logits": [
+     -109.71446228027344,
+     -106.4983139038086
+    ],
+    "logsumexp": -99.7583999633789,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 8,
+   "position": 6,
+   "head": 3,
+   "readout": {
+    "target_logits": [
+     -109.61312866210938,
+     -106.40631103515625
+    ],
+    "logsumexp": -99.66552734375,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 8,
+   "position": 6,
+   "head": 4,
+   "readout": {
+    "target_logits": [
+     -109.52127838134766,
+     -106.27986145019531
+    ],
+    "logsumexp": -99.5993423461914,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 8,
+   "position": 6,
+   "head": 5,
+   "readout": {
+    "target_logits": [
+     -109.72067260742188,
+     -106.50369262695312
+    ],
+    "logsumexp": -99.7755126953125,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 8,
+   "position": 6,
+   "head": 6,
+   "readout": {
+    "target_logits": [
+     -109.64332580566406,
+     -106.42117309570312
+    ],
+    "logsumexp": -99.7047348022461,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 8,
+   "position": 6,
+   "head": 7,
+   "readout": {
+    "target_logits": [
+     -109.6856918334961,
+     -106.47164916992188
+    ],
+    "logsumexp": -99.72535705566406,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 8,
+   "position": 6,
+   "head": 8,
+   "readout": {
+    "target_logits": [
+     -109.66304779052734,
+     -106.447509765625
+    ],
+    "logsumexp": -99.70639038085938,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 8,
+   "position": 6,
+   "head": 9,
+   "readout": {
+    "target_logits": [
+     -109.53886413574219,
+     -106.25927734375
+    ],
+    "logsumexp": -99.57449340820312,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 8,
+   "position": 6,
+   "head": 10,
+   "readout": {
+    "target_logits": [
+     -109.5137710571289,
+     -106.2655029296875
+    ],
+    "logsumexp": -99.59953308105469,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 8,
+   "position": 6,
+   "head": 11,
+   "readout": {
+    "target_logits": [
+     -109.36154174804688,
+     -106.26803588867188
+    ],
+    "logsumexp": -99.51708221435547,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 9,
+   "position": 6,
+   "head": 0,
+   "readout": {
+    "target_logits": [
+     -109.59883880615234,
+     -106.38015747070312
+    ],
+    "logsumexp": -99.67071533203125,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 9,
+   "position": 6,
+   "head": 1,
+   "readout": {
+    "target_logits": [
+     -109.60440063476562,
+     -106.378662109375
+    ],
+    "logsumexp": -99.6675796508789,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 9,
+   "position": 6,
+   "head": 2,
+   "readout": {
+    "target_logits": [
+     -109.566162109375,
+     -106.3563232421875
+    ],
+    "logsumexp": -99.63520812988281,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 9,
+   "position": 6,
+   "head": 3,
+   "readout": {
+    "target_logits": [
+     -109.71428680419922,
+     -106.50226593017578
+    ],
+    "logsumexp": -99.68791961669922,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 9,
+   "position": 6,
+   "head": 4,
+   "readout": {
+    "target_logits": [
+     -109.56156921386719,
+     -106.34406280517578
+    ],
+    "logsumexp": -99.62425994873047,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 9,
+   "position": 6,
+   "head": 5,
+   "readout": {
+    "target_logits": [
+     -109.66304016113281,
+     -106.40518188476562
+    ],
+    "logsumexp": -99.69684600830078,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 9,
+   "position": 6,
+   "head": 6,
+   "readout": {
+    "target_logits": [
+     -109.6059341430664,
+     -106.39069366455078
+    ],
+    "logsumexp": -99.67491912841797,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 9,
+   "position": 6,
+   "head": 7,
+   "readout": {
+    "target_logits": [
+     -109.60195922851562,
+     -106.3463363647461
+    ],
+    "logsumexp": -99.66119384765625,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 9,
+   "position": 6,
+   "head": 8,
+   "readout": {
+    "target_logits": [
+     -110.09736633300781,
+     -108.70680236816406
+    ],
+    "logsumexp": -101.07130432128906,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 9,
+   "position": 6,
+   "head": 9,
+   "readout": {
+    "target_logits": [
+     -109.5784683227539,
+     -106.38426971435547
+    ],
+    "logsumexp": -99.66324615478516,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 9,
+   "position": 6,
+   "head": 10,
+   "readout": {
+    "target_logits": [
+     -109.55095672607422,
+     -106.32318878173828
+    ],
+    "logsumexp": -99.61933135986328,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 9,
+   "position": 6,
+   "head": 11,
+   "readout": {
+    "target_logits": [
+     -109.59648895263672,
+     -106.3736801147461
+    ],
+    "logsumexp": -99.66004943847656,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 10,
+   "position": 6,
+   "head": 0,
+   "readout": {
+    "target_logits": [
+     -109.58455657958984,
+     -106.771728515625
+    ],
+    "logsumexp": -99.85261535644531,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 10,
+   "position": 6,
+   "head": 1,
+   "readout": {
+    "target_logits": [
+     -109.59595489501953,
+     -106.3800277709961
+    ],
+    "logsumexp": -99.66524505615234,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 10,
+   "position": 6,
+   "head": 2,
+   "readout": {
+    "target_logits": [
+     -109.58145141601562,
+     -106.36822509765625
+    ],
+    "logsumexp": -99.65754699707031,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 10,
+   "position": 6,
+   "head": 3,
+   "readout": {
+    "target_logits": [
+     -109.70980072021484,
+     -106.51844787597656
+    ],
+    "logsumexp": -99.80279541015625,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 10,
+   "position": 6,
+   "head": 4,
+   "readout": {
+    "target_logits": [
+     -109.49932098388672,
+     -106.26559448242188
+    ],
+    "logsumexp": -99.55460357666016,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 10,
+   "position": 6,
+   "head": 5,
+   "readout": {
+    "target_logits": [
+     -109.52163696289062,
+     -106.29292297363281
+    ],
+    "logsumexp": -99.58450317382812,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 10,
+   "position": 6,
+   "head": 6,
+   "readout": {
+    "target_logits": [
+     -109.60128784179688,
+     -106.38908386230469
+    ],
+    "logsumexp": -99.66632843017578,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 10,
+   "position": 6,
+   "head": 7,
+   "readout": {
+    "target_logits": [
+     -109.49903106689453,
+     -106.18623352050781
+    ],
+    "logsumexp": -99.51457214355469,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 10,
+   "position": 6,
+   "head": 8,
+   "readout": {
+    "target_logits": [
+     -109.59149169921875,
+     -106.36563873291016
+    ],
+    "logsumexp": -99.65446472167969,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 10,
+   "position": 6,
+   "head": 9,
+   "readout": {
+    "target_logits": [
+     -109.62862396240234,
+     -106.408935546875
+    ],
+    "logsumexp": -99.6875,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 10,
+   "position": 6,
+   "head": 10,
+   "readout": {
+    "target_logits": [
+     -109.58146667480469,
+     -106.41744995117188
+    ],
+    "logsumexp": -99.6837158203125,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 10,
+   "position": 6,
+   "head": 11,
+   "readout": {
+    "target_logits": [
+     -109.6192398071289,
+     -106.39595794677734
+    ],
+    "logsumexp": -99.67185974121094,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 11,
+   "position": 6,
+   "head": 0,
+   "readout": {
+    "target_logits": [
+     -109.62931060791016,
+     -106.3996810913086
+    ],
+    "logsumexp": -99.71957397460938,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 11,
+   "position": 6,
+   "head": 1,
+   "readout": {
+    "target_logits": [
+     -109.63748168945312,
+     -106.40243530273438
+    ],
+    "logsumexp": -99.68949127197266,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 11,
+   "position": 6,
+   "head": 2,
+   "readout": {
+    "target_logits": [
+     -109.18699645996094,
+     -106.83988952636719
+    ],
+    "logsumexp": -99.7839584350586,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 11,
+   "position": 6,
+   "head": 3,
+   "readout": {
+    "target_logits": [
+     -109.52981567382812,
+     -106.3766098022461
+    ],
+    "logsumexp": -99.63909149169922,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 11,
+   "position": 6,
+   "head": 4,
+   "readout": {
+    "target_logits": [
+     -109.74082946777344,
+     -106.48944091796875
+    ],
+    "logsumexp": -99.77464294433594,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 11,
+   "position": 6,
+   "head": 5,
+   "readout": {
+    "target_logits": [
+     -109.58243560791016,
+     -106.35669708251953
+    ],
+    "logsumexp": -99.64559173583984,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 11,
+   "position": 6,
+   "head": 6,
+   "readout": {
+    "target_logits": [
+     -109.6121597290039,
+     -106.40058135986328
+    ],
+    "logsumexp": -99.67657470703125,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 11,
+   "position": 6,
+   "head": 7,
+   "readout": {
+    "target_logits": [
+     -109.62791442871094,
+     -106.40233612060547
+    ],
+    "logsumexp": -99.6860580444336,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 11,
+   "position": 6,
+   "head": 8,
+   "readout": {
+    "target_logits": [
+     -110.18391418457031,
+     -106.9627456665039
+    ],
+    "logsumexp": -100.26063537597656,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 11,
+   "position": 6,
+   "head": 9,
+   "readout": {
+    "target_logits": [
+     -109.58773040771484,
+     -106.36488342285156
+    ],
+    "logsumexp": -99.65338134765625,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 11,
+   "position": 6,
+   "head": 10,
+   "readout": {
+    "target_logits": [
+     -109.79920196533203,
+     -106.39080810546875
+    ],
+    "logsumexp": -99.80023193359375,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 0,
+   "component": "z",
+   "layer": 11,
+   "position": 6,
+   "head": 11,
+   "readout": {
+    "target_logits": [
+     -109.6945571899414,
+     -106.4950180053711
+    ],
+    "logsumexp": -99.7799072265625,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 0,
+   "position": 6,
+   "head": 0,
+   "readout": {
+    "target_logits": [
+     -112.30255889892578,
+     -110.31426239013672
+    ],
+    "logsumexp": -102.63540649414062,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 0,
+   "position": 6,
+   "head": 1,
+   "readout": {
+    "target_logits": [
+     -112.31942749023438,
+     -110.33268737792969
+    ],
+    "logsumexp": -102.65111541748047,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 0,
+   "position": 6,
+   "head": 2,
+   "readout": {
+    "target_logits": [
+     -112.33088684082031,
+     -110.34455871582031
+    ],
+    "logsumexp": -102.66323852539062,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 0,
+   "position": 6,
+   "head": 3,
+   "readout": {
+    "target_logits": [
+     -112.31359100341797,
+     -110.32705688476562
+    ],
+    "logsumexp": -102.64342498779297,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 0,
+   "position": 6,
+   "head": 4,
+   "readout": {
+    "target_logits": [
+     -112.40473175048828,
+     -110.43098449707031
+    ],
+    "logsumexp": -102.73213958740234,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 0,
+   "position": 6,
+   "head": 5,
+   "readout": {
+    "target_logits": [
+     -112.31866455078125,
+     -110.33189392089844
+    ],
+    "logsumexp": -102.6504135131836,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 0,
+   "position": 6,
+   "head": 6,
+   "readout": {
+    "target_logits": [
+     -112.41563415527344,
+     -110.44937896728516
+    ],
+    "logsumexp": -102.712890625,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 0,
+   "position": 6,
+   "head": 7,
+   "readout": {
+    "target_logits": [
+     -112.42994689941406,
+     -110.456787109375
+    ],
+    "logsumexp": -102.75093078613281,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 0,
+   "position": 6,
+   "head": 8,
+   "readout": {
+    "target_logits": [
+     -112.33829498291016,
+     -110.34880065917969
+    ],
+    "logsumexp": -102.66582489013672,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 0,
+   "position": 6,
+   "head": 9,
+   "readout": {
+    "target_logits": [
+     -112.37918853759766,
+     -110.39331817626953
+    ],
+    "logsumexp": -102.70260620117188,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 0,
+   "position": 6,
+   "head": 10,
+   "readout": {
+    "target_logits": [
+     -112.28614044189453,
+     -110.3000717163086
+    ],
+    "logsumexp": -102.62223815917969,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 0,
+   "position": 6,
+   "head": 11,
+   "readout": {
+    "target_logits": [
+     -112.2959213256836,
+     -110.30451202392578
+    ],
+    "logsumexp": -102.637939453125,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 1,
+   "position": 6,
+   "head": 0,
+   "readout": {
+    "target_logits": [
+     -112.3283920288086,
+     -110.35050201416016
+    ],
+    "logsumexp": -102.6547622680664,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 1,
+   "position": 6,
+   "head": 1,
+   "readout": {
+    "target_logits": [
+     -112.3480224609375,
+     -110.35643768310547
+    ],
+    "logsumexp": -102.68436431884766,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 1,
+   "position": 6,
+   "head": 2,
+   "readout": {
+    "target_logits": [
+     -112.33953094482422,
+     -110.3531265258789
+    ],
+    "logsumexp": -102.67245483398438,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 1,
+   "position": 6,
+   "head": 3,
+   "readout": {
+    "target_logits": [
+     -112.30574035644531,
+     -110.31893157958984
+    ],
+    "logsumexp": -102.6440200805664,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 1,
+   "position": 6,
+   "head": 4,
+   "readout": {
+    "target_logits": [
+     -112.36129760742188,
+     -110.37298583984375
+    ],
+    "logsumexp": -102.68457794189453,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 1,
+   "position": 6,
+   "head": 5,
+   "readout": {
+    "target_logits": [
+     -112.30284881591797,
+     -110.31621551513672
+    ],
+    "logsumexp": -102.63323211669922,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 1,
+   "position": 6,
+   "head": 6,
+   "readout": {
+    "target_logits": [
+     -112.3115234375,
+     -110.32246398925781
+    ],
+    "logsumexp": -102.64591979980469,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 1,
+   "position": 6,
+   "head": 7,
+   "readout": {
+    "target_logits": [
+     -112.34363555908203,
+     -110.34869384765625
+    ],
+    "logsumexp": -102.70333862304688,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 1,
+   "position": 6,
+   "head": 8,
+   "readout": {
+    "target_logits": [
+     -112.39417266845703,
+     -110.39749908447266
+    ],
+    "logsumexp": -102.73611450195312,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 1,
+   "position": 6,
+   "head": 9,
+   "readout": {
+    "target_logits": [
+     -112.31085968017578,
+     -110.32672119140625
+    ],
+    "logsumexp": -102.63636016845703,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 1,
+   "position": 6,
+   "head": 10,
+   "readout": {
+    "target_logits": [
+     -112.30923461914062,
+     -110.32535552978516
+    ],
+    "logsumexp": -102.63603210449219,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 1,
+   "position": 6,
+   "head": 11,
+   "readout": {
+    "target_logits": [
+     -112.30011749267578,
+     -110.31501007080078
+    ],
+    "logsumexp": -102.65596771240234,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 2,
+   "position": 6,
+   "head": 0,
+   "readout": {
+    "target_logits": [
+     -112.3370132446289,
+     -110.3561782836914
+    ],
+    "logsumexp": -102.65574645996094,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 2,
+   "position": 6,
+   "head": 1,
+   "readout": {
+    "target_logits": [
+     -112.58189392089844,
+     -110.61852264404297
+    ],
+    "logsumexp": -102.87008666992188,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 2,
+   "position": 6,
+   "head": 2,
+   "readout": {
+    "target_logits": [
+     -112.4350357055664,
+     -110.50774383544922
+    ],
+    "logsumexp": -102.72999572753906,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 2,
+   "position": 6,
+   "head": 3,
+   "readout": {
+    "target_logits": [
+     -112.29948425292969,
+     -110.31377410888672
+    ],
+    "logsumexp": -102.6354751586914,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 2,
+   "position": 6,
+   "head": 4,
+   "readout": {
+    "target_logits": [
+     -112.32605743408203,
+     -110.34038543701172
+    ],
+    "logsumexp": -102.65837097167969,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 2,
+   "position": 6,
+   "head": 5,
+   "readout": {
+    "target_logits": [
+     -112.45968627929688,
+     -110.47108459472656
+    ],
+    "logsumexp": -102.76461791992188,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 2,
+   "position": 6,
+   "head": 6,
+   "readout": {
+    "target_logits": [
+     -112.271728515625,
+     -110.28636169433594
+    ],
+    "logsumexp": -102.60171508789062,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 2,
+   "position": 6,
+   "head": 7,
+   "readout": {
+    "target_logits": [
+     -112.27811431884766,
+     -110.2715072631836
+    ],
+    "logsumexp": -102.65038299560547,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 2,
+   "position": 6,
+   "head": 8,
+   "readout": {
+    "target_logits": [
+     -112.33362579345703,
+     -110.34523010253906
+    ],
+    "logsumexp": -102.66329193115234,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 2,
+   "position": 6,
+   "head": 9,
+   "readout": {
+    "target_logits": [
+     -112.36893463134766,
+     -110.38306427001953
+    ],
+    "logsumexp": -102.7084732055664,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 2,
+   "position": 6,
+   "head": 10,
+   "readout": {
+    "target_logits": [
+     -112.34002685546875,
+     -110.36992645263672
+    ],
+    "logsumexp": -102.65204620361328,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 2,
+   "position": 6,
+   "head": 11,
+   "readout": {
+    "target_logits": [
+     -112.2740249633789,
+     -110.28128814697266
+    ],
+    "logsumexp": -102.61077880859375,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 3,
+   "position": 6,
+   "head": 0,
+   "readout": {
+    "target_logits": [
+     -112.32447052001953,
+     -110.337890625
+    ],
+    "logsumexp": -102.6560287475586,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 3,
+   "position": 6,
+   "head": 1,
+   "readout": {
+    "target_logits": [
+     -112.3103256225586,
+     -110.3188247680664
+    ],
+    "logsumexp": -102.65232849121094,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 3,
+   "position": 6,
+   "head": 2,
+   "readout": {
+    "target_logits": [
+     -112.34188079833984,
+     -110.37383270263672
+    ],
+    "logsumexp": -102.65958404541016,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 3,
+   "position": 6,
+   "head": 3,
+   "readout": {
+    "target_logits": [
+     -112.33230590820312,
+     -110.3502426147461
+    ],
+    "logsumexp": -102.66004180908203,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 3,
+   "position": 6,
+   "head": 4,
+   "readout": {
+    "target_logits": [
+     -112.3388442993164,
+     -110.34852600097656
+    ],
+    "logsumexp": -102.66856384277344,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 3,
+   "position": 6,
+   "head": 5,
+   "readout": {
+    "target_logits": [
+     -112.31804656982422,
+     -110.33972930908203
+    ],
+    "logsumexp": -102.64183807373047,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 3,
+   "position": 6,
+   "head": 6,
+   "readout": {
+    "target_logits": [
+     -112.09815979003906,
+     -110.09027099609375
+    ],
+    "logsumexp": -102.54256439208984,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 3,
+   "position": 6,
+   "head": 7,
+   "readout": {
+    "target_logits": [
+     -112.3042221069336,
+     -110.28797912597656
+    ],
+    "logsumexp": -102.70427703857422,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 3,
+   "position": 6,
+   "head": 8,
+   "readout": {
+    "target_logits": [
+     -112.44866180419922,
+     -110.44977569580078
+    ],
+    "logsumexp": -102.77067565917969,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 3,
+   "position": 6,
+   "head": 9,
+   "readout": {
+    "target_logits": [
+     -112.3319320678711,
+     -110.34254455566406
+    ],
+    "logsumexp": -102.6613998413086,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 3,
+   "position": 6,
+   "head": 10,
+   "readout": {
+    "target_logits": [
+     -112.26660919189453,
+     -110.31834411621094
+    ],
+    "logsumexp": -102.55292510986328,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 3,
+   "position": 6,
+   "head": 11,
+   "readout": {
+    "target_logits": [
+     -112.33992004394531,
+     -110.36013793945312
+    ],
+    "logsumexp": -102.65923309326172,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 4,
+   "position": 6,
+   "head": 0,
+   "readout": {
+    "target_logits": [
+     -112.3019790649414,
+     -110.30145263671875
+    ],
+    "logsumexp": -102.64739990234375,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 4,
+   "position": 6,
+   "head": 1,
+   "readout": {
+    "target_logits": [
+     -112.28617095947266,
+     -110.2930908203125
+    ],
+    "logsumexp": -102.63262939453125,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 4,
+   "position": 6,
+   "head": 2,
+   "readout": {
+    "target_logits": [
+     -112.31876373291016,
+     -110.33021545410156
+    ],
+    "logsumexp": -102.65576934814453,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 4,
+   "position": 6,
+   "head": 3,
+   "readout": {
+    "target_logits": [
+     -112.31613159179688,
+     -110.3329849243164
+    ],
+    "logsumexp": -102.64371490478516,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 4,
+   "position": 6,
+   "head": 4,
+   "readout": {
+    "target_logits": [
+     -112.25819396972656,
+     -110.22486114501953
+    ],
+    "logsumexp": -102.61296844482422,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 4,
+   "position": 6,
+   "head": 5,
+   "readout": {
+    "target_logits": [
+     -112.19906616210938,
+     -110.20268249511719
+    ],
+    "logsumexp": -102.58810424804688,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 4,
+   "position": 6,
+   "head": 6,
+   "readout": {
+    "target_logits": [
+     -112.69800567626953,
+     -110.75775909423828
+    ],
+    "logsumexp": -102.84992218017578,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 4,
+   "position": 6,
+   "head": 7,
+   "readout": {
+    "target_logits": [
+     -112.35630798339844,
+     -110.36186218261719
+    ],
+    "logsumexp": -102.63825988769531,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 4,
+   "position": 6,
+   "head": 8,
+   "readout": {
+    "target_logits": [
+     -112.34463500976562,
+     -110.37370300292969
+    ],
+    "logsumexp": -102.66278076171875,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 4,
+   "position": 6,
+   "head": 9,
+   "readout": {
+    "target_logits": [
+     -112.39930725097656,
+     -110.41511535644531
+    ],
+    "logsumexp": -102.70777130126953,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 4,
+   "position": 6,
+   "head": 10,
+   "readout": {
+    "target_logits": [
+     -112.43251037597656,
+     -110.44132995605469
+    ],
+    "logsumexp": -102.7339096069336,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 4,
+   "position": 6,
+   "head": 11,
+   "readout": {
+    "target_logits": [
+     -111.83328247070312,
+     -109.8797607421875
+    ],
+    "logsumexp": -102.3045654296875,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 5,
+   "position": 6,
+   "head": 0,
+   "readout": {
+    "target_logits": [
+     -112.3163833618164,
+     -110.33055114746094
+    ],
+    "logsumexp": -102.64787292480469,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 5,
+   "position": 6,
+   "head": 1,
+   "readout": {
+    "target_logits": [
+     -112.31865692138672,
+     -110.33196258544922
+    ],
+    "logsumexp": -102.65035247802734,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 5,
+   "position": 6,
+   "head": 2,
+   "readout": {
+    "target_logits": [
+     -112.29647064208984,
+     -110.29489135742188
+    ],
+    "logsumexp": -102.65750885009766,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 5,
+   "position": 6,
+   "head": 3,
+   "readout": {
+    "target_logits": [
+     -112.33222961425781,
+     -110.3311767578125
+    ],
+    "logsumexp": -102.67237091064453,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 5,
+   "position": 6,
+   "head": 4,
+   "readout": {
+    "target_logits": [
+     -112.26129913330078,
+     -110.2909164428711
+    ],
+    "logsumexp": -102.5968246459961,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 5,
+   "position": 6,
+   "head": 5,
+   "readout": {
+    "target_logits": [
+     -112.31463623046875,
+     -110.32857513427734
+    ],
+    "logsumexp": -102.64725494384766,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 5,
+   "position": 6,
+   "head": 6,
+   "readout": {
+    "target_logits": [
+     -112.32353973388672,
+     -110.33887481689453
+    ],
+    "logsumexp": -102.65301513671875,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 5,
+   "position": 6,
+   "head": 7,
+   "readout": {
+    "target_logits": [
+     -112.27283477783203,
+     -110.24480438232422
+    ],
+    "logsumexp": -102.6419448852539,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 5,
+   "position": 6,
+   "head": 8,
+   "readout": {
+    "target_logits": [
+     -112.30885314941406,
+     -110.31953430175781
+    ],
+    "logsumexp": -102.64192962646484,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 5,
+   "position": 6,
+   "head": 9,
+   "readout": {
+    "target_logits": [
+     -112.34248352050781,
+     -110.36106872558594
+    ],
+    "logsumexp": -102.65536499023438,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 5,
+   "position": 6,
+   "head": 10,
+   "readout": {
+    "target_logits": [
+     -112.37922668457031,
+     -110.39476776123047
+    ],
+    "logsumexp": -102.7317886352539,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 5,
+   "position": 6,
+   "head": 11,
+   "readout": {
+    "target_logits": [
+     -112.16200256347656,
+     -110.17407989501953
+    ],
+    "logsumexp": -102.51409912109375,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 6,
+   "position": 6,
+   "head": 0,
+   "readout": {
+    "target_logits": [
+     -112.4454116821289,
+     -110.48696899414062
+    ],
+    "logsumexp": -102.73104858398438,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 6,
+   "position": 6,
+   "head": 1,
+   "readout": {
+    "target_logits": [
+     -112.37139129638672,
+     -110.3795166015625
+    ],
+    "logsumexp": -102.7086410522461,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 6,
+   "position": 6,
+   "head": 2,
+   "readout": {
+    "target_logits": [
+     -112.24443817138672,
+     -110.21915435791016
+    ],
+    "logsumexp": -102.587646484375,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 6,
+   "position": 6,
+   "head": 3,
+   "readout": {
+    "target_logits": [
+     -112.54937744140625,
+     -110.61754608154297
+    ],
+    "logsumexp": -102.8458251953125,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 6,
+   "position": 6,
+   "head": 4,
+   "readout": {
+    "target_logits": [
+     -111.39307403564453,
+     -109.57437133789062
+    ],
+    "logsumexp": -101.80626678466797,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 6,
+   "position": 6,
+   "head": 5,
+   "readout": {
+    "target_logits": [
+     -112.32047271728516,
+     -110.33090209960938
+    ],
+    "logsumexp": -102.62469482421875,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 6,
+   "position": 6,
+   "head": 6,
+   "readout": {
+    "target_logits": [
+     -112.34949493408203,
+     -110.36847686767578
+    ],
+    "logsumexp": -102.67283630371094,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 6,
+   "position": 6,
+   "head": 7,
+   "readout": {
+    "target_logits": [
+     -112.31658172607422,
+     -110.32344818115234
+    ],
+    "logsumexp": -102.67532348632812,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 6,
+   "position": 6,
+   "head": 8,
+   "readout": {
+    "target_logits": [
+     -112.31759643554688,
+     -110.3273696899414
+    ],
+    "logsumexp": -102.65767669677734,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 6,
+   "position": 6,
+   "head": 9,
+   "readout": {
+    "target_logits": [
+     -112.31592559814453,
+     -110.33077239990234
+    ],
+    "logsumexp": -102.64783477783203,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 6,
+   "position": 6,
+   "head": 10,
+   "readout": {
+    "target_logits": [
+     -112.33663177490234,
+     -110.3358154296875
+    ],
+    "logsumexp": -102.67399597167969,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 6,
+   "position": 6,
+   "head": 11,
+   "readout": {
+    "target_logits": [
+     -112.32161712646484,
+     -110.32393646240234
+    ],
+    "logsumexp": -102.66011810302734,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 7,
+   "position": 6,
+   "head": 0,
+   "readout": {
+    "target_logits": [
+     -112.33231353759766,
+     -110.35130310058594
+    ],
+    "logsumexp": -102.66365051269531,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 7,
+   "position": 6,
+   "head": 1,
+   "readout": {
+    "target_logits": [
+     -112.28294372558594,
+     -110.29708862304688
+    ],
+    "logsumexp": -102.63140869140625,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 7,
+   "position": 6,
+   "head": 2,
+   "readout": {
+    "target_logits": [
+     -112.31443786621094,
+     -110.327880859375
+    ],
+    "logsumexp": -102.64729309082031,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 7,
+   "position": 6,
+   "head": 3,
+   "readout": {
+    "target_logits": [
+     -112.33468627929688,
+     -110.3992919921875
+    ],
+    "logsumexp": -102.62659454345703,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 7,
+   "position": 6,
+   "head": 4,
+   "readout": {
+    "target_logits": [
+     -112.35283660888672,
+     -110.38029479980469
+    ],
+    "logsumexp": -102.67320251464844,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 7,
+   "position": 6,
+   "head": 5,
+   "readout": {
+    "target_logits": [
+     -112.40937042236328,
+     -110.43565368652344
+    ],
+    "logsumexp": -102.74285888671875,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 7,
+   "position": 6,
+   "head": 6,
+   "readout": {
+    "target_logits": [
+     -112.50482177734375,
+     -110.52143096923828
+    ],
+    "logsumexp": -102.83126831054688,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 7,
+   "position": 6,
+   "head": 7,
+   "readout": {
+    "target_logits": [
+     -112.32485961914062,
+     -110.3372573852539
+    ],
+    "logsumexp": -102.65764617919922,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 7,
+   "position": 6,
+   "head": 8,
+   "readout": {
+    "target_logits": [
+     -112.29129028320312,
+     -110.32551574707031
+    ],
+    "logsumexp": -102.60504150390625,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 7,
+   "position": 6,
+   "head": 9,
+   "readout": {
+    "target_logits": [
+     -112.33418273925781,
+     -110.33534240722656
+    ],
+    "logsumexp": -102.66439056396484,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 7,
+   "position": 6,
+   "head": 10,
+   "readout": {
+    "target_logits": [
+     -112.31912231445312,
+     -110.336181640625
+    ],
+    "logsumexp": -102.6527328491211,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 7,
+   "position": 6,
+   "head": 11,
+   "readout": {
+    "target_logits": [
+     -112.3091812133789,
+     -110.32089233398438
+    ],
+    "logsumexp": -102.641845703125,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 8,
+   "position": 6,
+   "head": 0,
+   "readout": {
+    "target_logits": [
+     -112.37086486816406,
+     -110.3807144165039
+    ],
+    "logsumexp": -102.7052993774414,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 8,
+   "position": 6,
+   "head": 1,
+   "readout": {
+    "target_logits": [
+     -112.31924438476562,
+     -110.33393096923828
+    ],
+    "logsumexp": -102.65062713623047,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 8,
+   "position": 6,
+   "head": 2,
+   "readout": {
+    "target_logits": [
+     -112.33128356933594,
+     -110.369140625
+    ],
+    "logsumexp": -102.67534637451172,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 8,
+   "position": 6,
+   "head": 3,
+   "readout": {
+    "target_logits": [
+     -112.31290435791016,
+     -110.32801818847656
+    ],
+    "logsumexp": -102.64366912841797,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 8,
+   "position": 6,
+   "head": 4,
+   "readout": {
+    "target_logits": [
+     -112.35480499267578,
+     -110.3770980834961
+    ],
+    "logsumexp": -102.67774200439453,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 8,
+   "position": 6,
+   "head": 5,
+   "readout": {
+    "target_logits": [
+     -112.17027282714844,
+     -110.16873931884766
+    ],
+    "logsumexp": -102.50659942626953,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 8,
+   "position": 6,
+   "head": 6,
+   "readout": {
+    "target_logits": [
+     -112.32171630859375,
+     -110.33506774902344
+    ],
+    "logsumexp": -102.65843200683594,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 8,
+   "position": 6,
+   "head": 7,
+   "readout": {
+    "target_logits": [
+     -112.32042694091797,
+     -110.331787109375
+    ],
+    "logsumexp": -102.63906860351562,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 8,
+   "position": 6,
+   "head": 8,
+   "readout": {
+    "target_logits": [
+     -112.28530883789062,
+     -110.30594635009766
+    ],
+    "logsumexp": -102.60336303710938,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 8,
+   "position": 6,
+   "head": 9,
+   "readout": {
+    "target_logits": [
+     -112.30230712890625,
+     -110.29830169677734
+    ],
+    "logsumexp": -102.64207458496094,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 8,
+   "position": 6,
+   "head": 10,
+   "readout": {
+    "target_logits": [
+     -112.31675720214844,
+     -110.29933166503906
+    ],
+    "logsumexp": -102.6330337524414,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 8,
+   "position": 6,
+   "head": 11,
+   "readout": {
+    "target_logits": [
+     -111.9653549194336,
+     -110.09967803955078
+    ],
+    "logsumexp": -102.43582916259766,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 9,
+   "position": 6,
+   "head": 0,
+   "readout": {
+    "target_logits": [
+     -112.3018569946289,
+     -110.32331848144531
+    ],
+    "logsumexp": -102.62461853027344,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 9,
+   "position": 6,
+   "head": 1,
+   "readout": {
+    "target_logits": [
+     -112.31099700927734,
+     -110.32425689697266
+    ],
+    "logsumexp": -102.64064025878906,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 9,
+   "position": 6,
+   "head": 2,
+   "readout": {
+    "target_logits": [
+     -112.310791015625,
+     -110.33810424804688
+    ],
+    "logsumexp": -102.65971374511719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 9,
+   "position": 6,
+   "head": 3,
+   "readout": {
+    "target_logits": [
+     -112.03962707519531,
+     -110.07440948486328
+    ],
+    "logsumexp": -102.39999389648438,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 9,
+   "position": 6,
+   "head": 4,
+   "readout": {
+    "target_logits": [
+     -112.32588195800781,
+     -110.3403091430664
+    ],
+    "logsumexp": -102.65943145751953,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 9,
+   "position": 6,
+   "head": 5,
+   "readout": {
+    "target_logits": [
+     -112.40362548828125,
+     -110.38442993164062
+    ],
+    "logsumexp": -102.68326568603516,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 9,
+   "position": 6,
+   "head": 6,
+   "readout": {
+    "target_logits": [
+     -112.32850646972656,
+     -110.35673522949219
+    ],
+    "logsumexp": -102.66828918457031,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 9,
+   "position": 6,
+   "head": 7,
+   "readout": {
+    "target_logits": [
+     -112.35382080078125,
+     -110.34928894042969
+    ],
+    "logsumexp": -102.68163299560547,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 9,
+   "position": 6,
+   "head": 8,
+   "readout": {
+    "target_logits": [
+     -110.64668273925781,
+     -111.0808334350586
+    ],
+    "logsumexp": -102.47116088867188,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 9,
+   "position": 6,
+   "head": 9,
+   "readout": {
+    "target_logits": [
+     -112.29712677001953,
+     -110.34877014160156
+    ],
+    "logsumexp": -102.6523208618164,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 9,
+   "position": 6,
+   "head": 10,
+   "readout": {
+    "target_logits": [
+     -112.35943603515625,
+     -110.3735580444336
+    ],
+    "logsumexp": -102.68986511230469,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 9,
+   "position": 6,
+   "head": 11,
+   "readout": {
+    "target_logits": [
+     -112.31912994384766,
+     -110.33374786376953
+    ],
+    "logsumexp": -102.65335845947266,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 10,
+   "position": 6,
+   "head": 0,
+   "readout": {
+    "target_logits": [
+     -112.09879302978516,
+     -110.4862060546875
+    ],
+    "logsumexp": -102.63787841796875,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 10,
+   "position": 6,
+   "head": 1,
+   "readout": {
+    "target_logits": [
+     -112.32575988769531,
+     -110.3501968383789
+    ],
+    "logsumexp": -102.66217803955078,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 10,
+   "position": 6,
+   "head": 2,
+   "readout": {
+    "target_logits": [
+     -112.33902740478516,
+     -110.37889862060547
+    ],
+    "logsumexp": -102.67768096923828,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 10,
+   "position": 6,
+   "head": 3,
+   "readout": {
+    "target_logits": [
+     -112.23091888427734,
+     -110.2703628540039
+    ],
+    "logsumexp": -102.5925521850586,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 10,
+   "position": 6,
+   "head": 4,
+   "readout": {
+    "target_logits": [
+     -112.45570373535156,
+     -110.45667266845703
+    ],
+    "logsumexp": -102.76262664794922,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 10,
+   "position": 6,
+   "head": 5,
+   "readout": {
+    "target_logits": [
+     -112.27703094482422,
+     -110.28413391113281
+    ],
+    "logsumexp": -102.60436248779297,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 10,
+   "position": 6,
+   "head": 6,
+   "readout": {
+    "target_logits": [
+     -112.33165740966797,
+     -110.3689956665039
+    ],
+    "logsumexp": -102.67578887939453,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 10,
+   "position": 6,
+   "head": 7,
+   "readout": {
+    "target_logits": [
+     -112.46617126464844,
+     -110.34770965576172
+    ],
+    "logsumexp": -102.68438720703125,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 10,
+   "position": 6,
+   "head": 8,
+   "readout": {
+    "target_logits": [
+     -112.31752014160156,
+     -110.3302001953125
+    ],
+    "logsumexp": -102.64966583251953,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 10,
+   "position": 6,
+   "head": 9,
+   "readout": {
+    "target_logits": [
+     -112.3388442993164,
+     -110.35444641113281
+    ],
+    "logsumexp": -102.68045043945312,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 10,
+   "position": 6,
+   "head": 10,
+   "readout": {
+    "target_logits": [
+     -112.06969451904297,
+     -110.1723403930664
+    ],
+    "logsumexp": -102.47300720214844,
+    "top_token_id": 262,
+    "top_token": " the"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 10,
+   "position": 6,
+   "head": 11,
+   "readout": {
+    "target_logits": [
+     -112.33798217773438,
+     -110.35314178466797
+    ],
+    "logsumexp": -102.66215515136719,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 11,
+   "position": 6,
+   "head": 0,
+   "readout": {
+    "target_logits": [
+     -112.22547149658203,
+     -110.23002624511719
+    ],
+    "logsumexp": -102.51591491699219,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 11,
+   "position": 6,
+   "head": 1,
+   "readout": {
+    "target_logits": [
+     -112.35617065429688,
+     -110.36883544921875
+    ],
+    "logsumexp": -102.6890869140625,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 11,
+   "position": 6,
+   "head": 2,
+   "readout": {
+    "target_logits": [
+     -111.73237609863281,
+     -110.98760223388672
+    ],
+    "logsumexp": -102.71760559082031,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 11,
+   "position": 6,
+   "head": 3,
+   "readout": {
+    "target_logits": [
+     -112.1881103515625,
+     -110.31755828857422
+    ],
+    "logsumexp": -102.632568359375,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 11,
+   "position": 6,
+   "head": 4,
+   "readout": {
+    "target_logits": [
+     -111.9083480834961,
+     -109.89382934570312
+    ],
+    "logsumexp": -102.24524688720703,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 11,
+   "position": 6,
+   "head": 5,
+   "readout": {
+    "target_logits": [
+     -112.30108642578125,
+     -110.31085968017578
+    ],
+    "logsumexp": -102.6297607421875,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 11,
+   "position": 6,
+   "head": 6,
+   "readout": {
+    "target_logits": [
+     -112.38186645507812,
+     -110.39982604980469
+    ],
+    "logsumexp": -102.72218322753906,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 11,
+   "position": 6,
+   "head": 7,
+   "readout": {
+    "target_logits": [
+     -112.28720092773438,
+     -110.29763793945312
+    ],
+    "logsumexp": -102.6126937866211,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 11,
+   "position": 6,
+   "head": 8,
+   "readout": {
+    "target_logits": [
+     -112.46978759765625,
+     -110.52763366699219
+    ],
+    "logsumexp": -102.82290649414062,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 11,
+   "position": 6,
+   "head": 9,
+   "readout": {
+    "target_logits": [
+     -112.32524108886719,
+     -110.3366928100586
+    ],
+    "logsumexp": -102.65528106689453,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 11,
+   "position": 6,
+   "head": 10,
+   "readout": {
+    "target_logits": [
+     -112.36475372314453,
+     -110.16999816894531
+    ],
+    "logsumexp": -102.46543884277344,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 1,
+   "component": "z",
+   "layer": 11,
+   "position": 6,
+   "head": 11,
+   "readout": {
+    "target_logits": [
+     -111.87964630126953,
+     -109.9132080078125
+    ],
+    "logsumexp": -102.22978210449219,
+    "top_token_id": 783,
+    "top_token": " now"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 0,
+   "position": 6,
+   "head": 0,
+   "readout": {
+    "target_logits": [
+     -112.26949310302734,
+     -110.3136215209961
+    ],
+    "logsumexp": -102.976806640625,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 0,
+   "position": 6,
+   "head": 1,
+   "readout": {
+    "target_logits": [
+     -112.2751693725586,
+     -110.31841278076172
+    ],
+    "logsumexp": -102.98169708251953,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 0,
+   "position": 6,
+   "head": 2,
+   "readout": {
+    "target_logits": [
+     -112.26200866699219,
+     -110.30533599853516
+    ],
+    "logsumexp": -102.97146606445312,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 0,
+   "position": 6,
+   "head": 3,
+   "readout": {
+    "target_logits": [
+     -112.28045654296875,
+     -110.32250213623047
+    ],
+    "logsumexp": -102.98792266845703,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 0,
+   "position": 6,
+   "head": 4,
+   "readout": {
+    "target_logits": [
+     -112.25585174560547,
+     -110.30403137207031
+    ],
+    "logsumexp": -102.95734405517578,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 0,
+   "position": 6,
+   "head": 5,
+   "readout": {
+    "target_logits": [
+     -112.2768783569336,
+     -110.32019805908203
+    ],
+    "logsumexp": -102.9831314086914,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 0,
+   "position": 6,
+   "head": 6,
+   "readout": {
+    "target_logits": [
+     -112.16641998291016,
+     -110.21127319335938
+    ],
+    "logsumexp": -102.8955078125,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 0,
+   "position": 6,
+   "head": 7,
+   "readout": {
+    "target_logits": [
+     -112.2099838256836,
+     -110.25196075439453
+    ],
+    "logsumexp": -102.9289321899414,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 0,
+   "position": 6,
+   "head": 8,
+   "readout": {
+    "target_logits": [
+     -112.27670288085938,
+     -110.3212661743164
+    ],
+    "logsumexp": -102.98082733154297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 0,
+   "position": 6,
+   "head": 9,
+   "readout": {
+    "target_logits": [
+     -112.28214263916016,
+     -110.32334899902344
+    ],
+    "logsumexp": -102.98841094970703,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 0,
+   "position": 6,
+   "head": 10,
+   "readout": {
+    "target_logits": [
+     -112.28256225585938,
+     -110.32917022705078
+    ],
+    "logsumexp": -102.98875427246094,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 0,
+   "position": 6,
+   "head": 11,
+   "readout": {
+    "target_logits": [
+     -112.28534698486328,
+     -110.3266830444336
+    ],
+    "logsumexp": -102.99268341064453,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 1,
+   "position": 6,
+   "head": 0,
+   "readout": {
+    "target_logits": [
+     -112.26751708984375,
+     -110.31497192382812
+    ],
+    "logsumexp": -102.97913360595703,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 1,
+   "position": 6,
+   "head": 1,
+   "readout": {
+    "target_logits": [
+     -112.27911376953125,
+     -110.32347869873047
+    ],
+    "logsumexp": -102.99065399169922,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 1,
+   "position": 6,
+   "head": 2,
+   "readout": {
+    "target_logits": [
+     -112.24583435058594,
+     -110.28929901123047
+    ],
+    "logsumexp": -102.95865631103516,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 1,
+   "position": 6,
+   "head": 3,
+   "readout": {
+    "target_logits": [
+     -112.2718505859375,
+     -110.30711364746094
+    ],
+    "logsumexp": -102.9854736328125,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 1,
+   "position": 6,
+   "head": 4,
+   "readout": {
+    "target_logits": [
+     -112.31422424316406,
+     -110.36090850830078
+    ],
+    "logsumexp": -103.01383209228516,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 1,
+   "position": 6,
+   "head": 5,
+   "readout": {
+    "target_logits": [
+     -112.29156494140625,
+     -110.3353500366211
+    ],
+    "logsumexp": -102.9969253540039,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 1,
+   "position": 6,
+   "head": 6,
+   "readout": {
+    "target_logits": [
+     -112.25621795654297,
+     -110.29955291748047
+    ],
+    "logsumexp": -102.9651107788086,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 1,
+   "position": 6,
+   "head": 7,
+   "readout": {
+    "target_logits": [
+     -112.1404037475586,
+     -110.1952133178711
+    ],
+    "logsumexp": -102.8918685913086,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 1,
+   "position": 6,
+   "head": 8,
+   "readout": {
+    "target_logits": [
+     -112.25350189208984,
+     -110.30186462402344
+    ],
+    "logsumexp": -102.95112609863281,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 1,
+   "position": 6,
+   "head": 9,
+   "readout": {
+    "target_logits": [
+     -112.28414916992188,
+     -110.3245620727539
+    ],
+    "logsumexp": -102.99149322509766,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 1,
+   "position": 6,
+   "head": 10,
+   "readout": {
+    "target_logits": [
+     -112.23030090332031,
+     -110.26477813720703
+    ],
+    "logsumexp": -102.94476318359375,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 1,
+   "position": 6,
+   "head": 11,
+   "readout": {
+    "target_logits": [
+     -112.26985168457031,
+     -110.31233215332031
+    ],
+    "logsumexp": -102.97309112548828,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 2,
+   "position": 6,
+   "head": 0,
+   "readout": {
+    "target_logits": [
+     -112.31127166748047,
+     -110.3664779663086
+    ],
+    "logsumexp": -103.00093078613281,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 2,
+   "position": 6,
+   "head": 1,
+   "readout": {
+    "target_logits": [
+     -112.25292205810547,
+     -110.30451965332031
+    ],
+    "logsumexp": -102.9760971069336,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 2,
+   "position": 6,
+   "head": 2,
+   "readout": {
+    "target_logits": [
+     -112.25448608398438,
+     -110.29798889160156
+    ],
+    "logsumexp": -102.97071075439453,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 2,
+   "position": 6,
+   "head": 3,
+   "readout": {
+    "target_logits": [
+     -112.28804779052734,
+     -110.33386993408203
+    ],
+    "logsumexp": -102.9919204711914,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 2,
+   "position": 6,
+   "head": 4,
+   "readout": {
+    "target_logits": [
+     -112.26783752441406,
+     -110.30962371826172
+    ],
+    "logsumexp": -102.97875213623047,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 2,
+   "position": 6,
+   "head": 5,
+   "readout": {
+    "target_logits": [
+     -112.22940826416016,
+     -110.27161407470703
+    ],
+    "logsumexp": -102.929931640625,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 2,
+   "position": 6,
+   "head": 6,
+   "readout": {
+    "target_logits": [
+     -112.2898941040039,
+     -110.33592987060547
+    ],
+    "logsumexp": -102.99292755126953,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 2,
+   "position": 6,
+   "head": 7,
+   "readout": {
+    "target_logits": [
+     -112.19442749023438,
+     -110.2412338256836
+    ],
+    "logsumexp": -102.90782165527344,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 2,
+   "position": 6,
+   "head": 8,
+   "readout": {
+    "target_logits": [
+     -112.27745819091797,
+     -110.32125091552734
+    ],
+    "logsumexp": -102.98515319824219,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 2,
+   "position": 6,
+   "head": 9,
+   "readout": {
+    "target_logits": [
+     -112.17578887939453,
+     -110.20662689208984
+    ],
+    "logsumexp": -102.92871856689453,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 2,
+   "position": 6,
+   "head": 10,
+   "readout": {
+    "target_logits": [
+     -112.22415924072266,
+     -110.2579116821289
+    ],
+    "logsumexp": -102.96442413330078,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 2,
+   "position": 6,
+   "head": 11,
+   "readout": {
+    "target_logits": [
+     -112.25396728515625,
+     -110.29825592041016
+    ],
+    "logsumexp": -102.9568862915039,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 3,
+   "position": 6,
+   "head": 0,
+   "readout": {
+    "target_logits": [
+     -112.26588439941406,
+     -110.3081283569336
+    ],
+    "logsumexp": -102.97559356689453,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 3,
+   "position": 6,
+   "head": 1,
+   "readout": {
+    "target_logits": [
+     -112.28398895263672,
+     -110.32797241210938
+    ],
+    "logsumexp": -102.99165344238281,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 3,
+   "position": 6,
+   "head": 2,
+   "readout": {
+    "target_logits": [
+     -112.2511978149414,
+     -110.28246307373047
+    ],
+    "logsumexp": -102.97886657714844,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 3,
+   "position": 6,
+   "head": 3,
+   "readout": {
+    "target_logits": [
+     -112.2572250366211,
+     -110.30044555664062
+    ],
+    "logsumexp": -102.96784973144531,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 3,
+   "position": 6,
+   "head": 4,
+   "readout": {
+    "target_logits": [
+     -112.23236083984375,
+     -110.27340698242188
+    ],
+    "logsumexp": -102.93742370605469,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 3,
+   "position": 6,
+   "head": 5,
+   "readout": {
+    "target_logits": [
+     -112.29712677001953,
+     -110.34532165527344
+    ],
+    "logsumexp": -103.00174713134766,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 3,
+   "position": 6,
+   "head": 6,
+   "readout": {
+    "target_logits": [
+     -112.42373657226562,
+     -110.4804458618164
+    ],
+    "logsumexp": -103.08296203613281,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 3,
+   "position": 6,
+   "head": 7,
+   "readout": {
+    "target_logits": [
+     -112.2707748413086,
+     -110.30657196044922
+    ],
+    "logsumexp": -103.01666259765625,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 3,
+   "position": 6,
+   "head": 8,
+   "readout": {
+    "target_logits": [
+     -112.31180572509766,
+     -110.35773468017578
+    ],
+    "logsumexp": -103.02410888671875,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 3,
+   "position": 6,
+   "head": 9,
+   "readout": {
+    "target_logits": [
+     -112.2628402709961,
+     -110.30522918701172
+    ],
+    "logsumexp": -102.97139739990234,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 3,
+   "position": 6,
+   "head": 10,
+   "readout": {
+    "target_logits": [
+     -112.3661117553711,
+     -110.39933776855469
+    ],
+    "logsumexp": -103.04741668701172,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 3,
+   "position": 6,
+   "head": 11,
+   "readout": {
+    "target_logits": [
+     -112.24278259277344,
+     -110.27772521972656
+    ],
+    "logsumexp": -102.9687728881836,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 4,
+   "position": 6,
+   "head": 0,
+   "readout": {
+    "target_logits": [
+     -112.26053619384766,
+     -110.30200958251953
+    ],
+    "logsumexp": -102.97415924072266,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 4,
+   "position": 6,
+   "head": 1,
+   "readout": {
+    "target_logits": [
+     -112.29611206054688,
+     -110.33781433105469
+    ],
+    "logsumexp": -103.00164794921875,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 4,
+   "position": 6,
+   "head": 2,
+   "readout": {
+    "target_logits": [
+     -112.26522064208984,
+     -110.30693817138672
+    ],
+    "logsumexp": -102.97941589355469,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 4,
+   "position": 6,
+   "head": 3,
+   "readout": {
+    "target_logits": [
+     -112.27906036376953,
+     -110.3203353881836
+    ],
+    "logsumexp": -102.99098205566406,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 4,
+   "position": 6,
+   "head": 4,
+   "readout": {
+    "target_logits": [
+     -112.33251953125,
+     -110.38321685791016
+    ],
+    "logsumexp": -103.00045776367188,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 4,
+   "position": 6,
+   "head": 5,
+   "readout": {
+    "target_logits": [
+     -112.29729461669922,
+     -110.33680725097656
+    ],
+    "logsumexp": -103.00145721435547,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 4,
+   "position": 6,
+   "head": 6,
+   "readout": {
+    "target_logits": [
+     -112.40679168701172,
+     -110.44155883789062
+    ],
+    "logsumexp": -103.05470275878906,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 4,
+   "position": 6,
+   "head": 7,
+   "readout": {
+    "target_logits": [
+     -112.30704498291016,
+     -110.35111999511719
+    ],
+    "logsumexp": -102.97743225097656,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 4,
+   "position": 6,
+   "head": 8,
+   "readout": {
+    "target_logits": [
+     -112.2998046875,
+     -110.34103393554688
+    ],
+    "logsumexp": -103.00933074951172,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 4,
+   "position": 6,
+   "head": 9,
+   "readout": {
+    "target_logits": [
+     -112.31238555908203,
+     -110.36289978027344
+    ],
+    "logsumexp": -103.01998901367188,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 4,
+   "position": 6,
+   "head": 10,
+   "readout": {
+    "target_logits": [
+     -112.27021789550781,
+     -110.31583404541016
+    ],
+    "logsumexp": -102.98609924316406,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 4,
+   "position": 6,
+   "head": 11,
+   "readout": {
+    "target_logits": [
+     -112.13201141357422,
+     -110.2230224609375
+    ],
+    "logsumexp": -102.84452819824219,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 5,
+   "position": 6,
+   "head": 0,
+   "readout": {
+    "target_logits": [
+     -112.27066040039062,
+     -110.31451416015625
+    ],
+    "logsumexp": -102.97876739501953,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 5,
+   "position": 6,
+   "head": 1,
+   "readout": {
+    "target_logits": [
+     -112.27590942382812,
+     -110.31909942626953
+    ],
+    "logsumexp": -102.98263549804688,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 5,
+   "position": 6,
+   "head": 2,
+   "readout": {
+    "target_logits": [
+     -112.21794891357422,
+     -110.25840759277344
+    ],
+    "logsumexp": -102.9264144897461,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 5,
+   "position": 6,
+   "head": 3,
+   "readout": {
+    "target_logits": [
+     -112.23277282714844,
+     -110.26551055908203
+    ],
+    "logsumexp": -102.94866943359375,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 5,
+   "position": 6,
+   "head": 4,
+   "readout": {
+    "target_logits": [
+     -112.30015563964844,
+     -110.34175109863281
+    ],
+    "logsumexp": -103.00442504882812,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 5,
+   "position": 6,
+   "head": 5,
+   "readout": {
+    "target_logits": [
+     -112.28123474121094,
+     -110.3234634399414
+    ],
+    "logsumexp": -102.98713684082031,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 5,
+   "position": 6,
+   "head": 6,
+   "readout": {
+    "target_logits": [
+     -112.3022689819336,
+     -110.3448257446289
+    ],
+    "logsumexp": -103.02226257324219,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 5,
+   "position": 6,
+   "head": 7,
+   "readout": {
+    "target_logits": [
+     -112.2957763671875,
+     -110.3408432006836
+    ],
+    "logsumexp": -102.9970932006836,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 5,
+   "position": 6,
+   "head": 8,
+   "readout": {
+    "target_logits": [
+     -112.2713851928711,
+     -110.31434631347656
+    ],
+    "logsumexp": -102.9822998046875,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 5,
+   "position": 6,
+   "head": 9,
+   "readout": {
+    "target_logits": [
+     -112.25462341308594,
+     -110.30664825439453
+    ],
+    "logsumexp": -102.9639892578125,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 5,
+   "position": 6,
+   "head": 10,
+   "readout": {
+    "target_logits": [
+     -112.04936218261719,
+     -110.08917999267578
+    ],
+    "logsumexp": -102.78113555908203,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 5,
+   "position": 6,
+   "head": 11,
+   "readout": {
+    "target_logits": [
+     -112.36089324951172,
+     -110.3958511352539
+    ],
+    "logsumexp": -103.07383728027344,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 6,
+   "position": 6,
+   "head": 0,
+   "readout": {
+    "target_logits": [
+     -112.29828643798828,
+     -110.34715270996094
+    ],
+    "logsumexp": -102.99317932128906,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 6,
+   "position": 6,
+   "head": 1,
+   "readout": {
+    "target_logits": [
+     -112.26644897460938,
+     -110.31553649902344
+    ],
+    "logsumexp": -102.96763610839844,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 6,
+   "position": 6,
+   "head": 2,
+   "readout": {
+    "target_logits": [
+     -112.39334106445312,
+     -110.46317291259766
+    ],
+    "logsumexp": -103.08566284179688,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 6,
+   "position": 6,
+   "head": 3,
+   "readout": {
+    "target_logits": [
+     -112.2332534790039,
+     -110.27922058105469
+    ],
+    "logsumexp": -102.9520492553711,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 6,
+   "position": 6,
+   "head": 4,
+   "readout": {
+    "target_logits": [
+     -112.4476089477539,
+     -110.64108276367188
+    ],
+    "logsumexp": -103.32455444335938,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 6,
+   "position": 6,
+   "head": 5,
+   "readout": {
+    "target_logits": [
+     -112.28472900390625,
+     -110.3437271118164
+    ],
+    "logsumexp": -102.96996307373047,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 6,
+   "position": 6,
+   "head": 6,
+   "readout": {
+    "target_logits": [
+     -112.2567138671875,
+     -110.28483581542969
+    ],
+    "logsumexp": -102.97855377197266,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 6,
+   "position": 6,
+   "head": 7,
+   "readout": {
+    "target_logits": [
+     -112.36585998535156,
+     -110.40116882324219
+    ],
+    "logsumexp": -103.05821228027344,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 6,
+   "position": 6,
+   "head": 8,
+   "readout": {
+    "target_logits": [
+     -112.24298858642578,
+     -110.28392028808594
+    ],
+    "logsumexp": -102.96089935302734,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 6,
+   "position": 6,
+   "head": 9,
+   "readout": {
+    "target_logits": [
+     -112.27301025390625,
+     -110.31641387939453
+    ],
+    "logsumexp": -102.9806900024414,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 6,
+   "position": 6,
+   "head": 10,
+   "readout": {
+    "target_logits": [
+     -112.27281188964844,
+     -110.31196594238281
+    ],
+    "logsumexp": -102.97772216796875,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 6,
+   "position": 6,
+   "head": 11,
+   "readout": {
+    "target_logits": [
+     -112.28831481933594,
+     -110.33007049560547
+    ],
+    "logsumexp": -102.9902114868164,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 7,
+   "position": 6,
+   "head": 0,
+   "readout": {
+    "target_logits": [
+     -112.2822265625,
+     -110.3288803100586
+    ],
+    "logsumexp": -102.98844909667969,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 7,
+   "position": 6,
+   "head": 1,
+   "readout": {
+    "target_logits": [
+     -112.27244567871094,
+     -110.3176040649414
+    ],
+    "logsumexp": -102.97848510742188,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 7,
+   "position": 6,
+   "head": 2,
+   "readout": {
+    "target_logits": [
+     -112.280029296875,
+     -110.32717895507812
+    ],
+    "logsumexp": -102.98970794677734,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 7,
+   "position": 6,
+   "head": 3,
+   "readout": {
+    "target_logits": [
+     -112.31707000732422,
+     -110.341796875
+    ],
+    "logsumexp": -103.01577758789062,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 7,
+   "position": 6,
+   "head": 4,
+   "readout": {
+    "target_logits": [
+     -112.25334930419922,
+     -110.29517364501953
+    ],
+    "logsumexp": -102.95964050292969,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 7,
+   "position": 6,
+   "head": 5,
+   "readout": {
+    "target_logits": [
+     -112.12803649902344,
+     -110.17101287841797
+    ],
+    "logsumexp": -102.85200500488281,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 7,
+   "position": 6,
+   "head": 6,
+   "readout": {
+    "target_logits": [
+     -112.45805358886719,
+     -110.52291107177734
+    ],
+    "logsumexp": -103.15728759765625,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 7,
+   "position": 6,
+   "head": 7,
+   "readout": {
+    "target_logits": [
+     -112.27722930908203,
+     -110.32093811035156
+    ],
+    "logsumexp": -102.98352813720703,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 7,
+   "position": 6,
+   "head": 8,
+   "readout": {
+    "target_logits": [
+     -112.23877716064453,
+     -110.28955078125
+    ],
+    "logsumexp": -102.95979309082031,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 7,
+   "position": 6,
+   "head": 9,
+   "readout": {
+    "target_logits": [
+     -112.23033142089844,
+     -110.27426147460938
+    ],
+    "logsumexp": -102.93077087402344,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 7,
+   "position": 6,
+   "head": 10,
+   "readout": {
+    "target_logits": [
+     -112.28084564208984,
+     -110.3275146484375
+    ],
+    "logsumexp": -102.98748016357422,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 7,
+   "position": 6,
+   "head": 11,
+   "readout": {
+    "target_logits": [
+     -112.302734375,
+     -110.34835052490234
+    ],
+    "logsumexp": -103.0020751953125,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 8,
+   "position": 6,
+   "head": 0,
+   "readout": {
+    "target_logits": [
+     -112.26683807373047,
+     -110.29459381103516
+    ],
+    "logsumexp": -102.98490142822266,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 8,
+   "position": 6,
+   "head": 1,
+   "readout": {
+    "target_logits": [
+     -112.28892517089844,
+     -110.33466339111328
+    ],
+    "logsumexp": -102.99311065673828,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 8,
+   "position": 6,
+   "head": 2,
+   "readout": {
+    "target_logits": [
+     -112.30925750732422,
+     -110.38532257080078
+    ],
+    "logsumexp": -103.0252685546875,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 8,
+   "position": 6,
+   "head": 3,
+   "readout": {
+    "target_logits": [
+     -112.2795639038086,
+     -110.32843780517578
+    ],
+    "logsumexp": -102.98777770996094,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 8,
+   "position": 6,
+   "head": 4,
+   "readout": {
+    "target_logits": [
+     -112.31400299072266,
+     -110.35372924804688
+    ],
+    "logsumexp": -103.02526092529297,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 8,
+   "position": 6,
+   "head": 5,
+   "readout": {
+    "target_logits": [
+     -111.87593841552734,
+     -109.90094757080078
+    ],
+    "logsumexp": -102.58536529541016,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 8,
+   "position": 6,
+   "head": 6,
+   "readout": {
+    "target_logits": [
+     -112.21424865722656,
+     -110.26216888427734
+    ],
+    "logsumexp": -102.92449951171875,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 8,
+   "position": 6,
+   "head": 7,
+   "readout": {
+    "target_logits": [
+     -112.27936553955078,
+     -110.3218765258789
+    ],
+    "logsumexp": -102.99574279785156,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 8,
+   "position": 6,
+   "head": 8,
+   "readout": {
+    "target_logits": [
+     -112.2323989868164,
+     -110.27825927734375
+    ],
+    "logsumexp": -102.95462799072266,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 8,
+   "position": 6,
+   "head": 9,
+   "readout": {
+    "target_logits": [
+     -112.33032989501953,
+     -110.37684631347656
+    ],
+    "logsumexp": -103.02254486083984,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 8,
+   "position": 6,
+   "head": 10,
+   "readout": {
+    "target_logits": [
+     -112.25112915039062,
+     -110.26266479492188
+    ],
+    "logsumexp": -102.9106674194336,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 8,
+   "position": 6,
+   "head": 11,
+   "readout": {
+    "target_logits": [
+     -112.24407196044922,
+     -110.45819854736328
+    ],
+    "logsumexp": -103.04533386230469,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 9,
+   "position": 6,
+   "head": 0,
+   "readout": {
+    "target_logits": [
+     -112.19129943847656,
+     -110.25252532958984
+    ],
+    "logsumexp": -102.88926696777344,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 9,
+   "position": 6,
+   "head": 1,
+   "readout": {
+    "target_logits": [
+     -112.2982177734375,
+     -110.33919525146484
+    ],
+    "logsumexp": -103.00141143798828,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 9,
+   "position": 6,
+   "head": 2,
+   "readout": {
+    "target_logits": [
+     -112.27330780029297,
+     -110.31824493408203
+    ],
+    "logsumexp": -102.96969604492188,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 9,
+   "position": 6,
+   "head": 3,
+   "readout": {
+    "target_logits": [
+     -112.13603973388672,
+     -110.19933319091797
+    ],
+    "logsumexp": -102.84364318847656,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 9,
+   "position": 6,
+   "head": 4,
+   "readout": {
+    "target_logits": [
+     -112.30052185058594,
+     -110.34471893310547
+    ],
+    "logsumexp": -103.01006317138672,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 9,
+   "position": 6,
+   "head": 5,
+   "readout": {
+    "target_logits": [
+     -112.29254150390625,
+     -110.2984848022461
+    ],
+    "logsumexp": -103.00263214111328,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 9,
+   "position": 6,
+   "head": 6,
+   "readout": {
+    "target_logits": [
+     -112.25882720947266,
+     -110.30819702148438
+    ],
+    "logsumexp": -102.97095489501953,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 9,
+   "position": 6,
+   "head": 7,
+   "readout": {
+    "target_logits": [
+     -112.40619659423828,
+     -110.39512634277344
+    ],
+    "logsumexp": -103.08857727050781,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 9,
+   "position": 6,
+   "head": 8,
+   "readout": {
+    "target_logits": [
+     -111.15714263916016,
+     -111.02978515625
+    ],
+    "logsumexp": -102.96292114257812,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 9,
+   "position": 6,
+   "head": 9,
+   "readout": {
+    "target_logits": [
+     -112.27279663085938,
+     -110.33975219726562
+    ],
+    "logsumexp": -102.9946517944336,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 9,
+   "position": 6,
+   "head": 10,
+   "readout": {
+    "target_logits": [
+     -112.37568664550781,
+     -110.4227523803711
+    ],
+    "logsumexp": -103.04414367675781,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 9,
+   "position": 6,
+   "head": 11,
+   "readout": {
+    "target_logits": [
+     -112.27668762207031,
+     -110.32145690917969
+    ],
+    "logsumexp": -102.98448181152344,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 10,
+   "position": 6,
+   "head": 0,
+   "readout": {
+    "target_logits": [
+     -111.8995361328125,
+     -110.30494689941406
+    ],
+    "logsumexp": -102.88160705566406,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 10,
+   "position": 6,
+   "head": 1,
+   "readout": {
+    "target_logits": [
+     -112.27352905273438,
+     -110.32723999023438
+    ],
+    "logsumexp": -102.98413848876953,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 10,
+   "position": 6,
+   "head": 2,
+   "readout": {
+    "target_logits": [
+     -112.34815979003906,
+     -110.42059326171875
+    ],
+    "logsumexp": -103.06451416015625,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 10,
+   "position": 6,
+   "head": 3,
+   "readout": {
+    "target_logits": [
+     -112.25537872314453,
+     -110.35121154785156
+    ],
+    "logsumexp": -102.97113037109375,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 10,
+   "position": 6,
+   "head": 4,
+   "readout": {
+    "target_logits": [
+     -112.26985168457031,
+     -110.3286361694336
+    ],
+    "logsumexp": -102.99803924560547,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 10,
+   "position": 6,
+   "head": 5,
+   "readout": {
+    "target_logits": [
+     -112.2099609375,
+     -110.2601547241211
+    ],
+    "logsumexp": -102.91555786132812,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 10,
+   "position": 6,
+   "head": 6,
+   "readout": {
+    "target_logits": [
+     -112.33106231689453,
+     -110.38597106933594
+    ],
+    "logsumexp": -103.03484344482422,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 10,
+   "position": 6,
+   "head": 7,
+   "readout": {
+    "target_logits": [
+     -112.43653106689453,
+     -110.23743438720703
+    ],
+    "logsumexp": -103.0243148803711,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 10,
+   "position": 6,
+   "head": 8,
+   "readout": {
+    "target_logits": [
+     -112.26705932617188,
+     -110.31058502197266
+    ],
+    "logsumexp": -102.97299194335938,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 10,
+   "position": 6,
+   "head": 9,
+   "readout": {
+    "target_logits": [
+     -112.24797058105469,
+     -110.2982177734375
+    ],
+    "logsumexp": -102.93956756591797,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 10,
+   "position": 6,
+   "head": 10,
+   "readout": {
+    "target_logits": [
+     -112.26716613769531,
+     -110.45181274414062
+    ],
+    "logsumexp": -103.04728698730469,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 10,
+   "position": 6,
+   "head": 11,
+   "readout": {
+    "target_logits": [
+     -112.29029846191406,
+     -110.33084869384766
+    ],
+    "logsumexp": -102.98682403564453,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 11,
+   "position": 6,
+   "head": 0,
+   "readout": {
+    "target_logits": [
+     -112.1713638305664,
+     -110.10528564453125
+    ],
+    "logsumexp": -102.82837677001953,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 11,
+   "position": 6,
+   "head": 1,
+   "readout": {
+    "target_logits": [
+     -112.2886734008789,
+     -110.3398666381836
+    ],
+    "logsumexp": -102.99515533447266,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 11,
+   "position": 6,
+   "head": 2,
+   "readout": {
+    "target_logits": [
+     -111.37837982177734,
+     -110.72036743164062
+    ],
+    "logsumexp": -102.80378723144531,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 11,
+   "position": 6,
+   "head": 3,
+   "readout": {
+    "target_logits": [
+     -112.16728973388672,
+     -110.36711120605469
+    ],
+    "logsumexp": -102.97331237792969,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 11,
+   "position": 6,
+   "head": 4,
+   "readout": {
+    "target_logits": [
+     -112.41826629638672,
+     -110.44376373291016
+    ],
+    "logsumexp": -103.1301498413086,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 11,
+   "position": 6,
+   "head": 5,
+   "readout": {
+    "target_logits": [
+     -112.28398895263672,
+     -110.32333374023438
+    ],
+    "logsumexp": -102.98632049560547,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 11,
+   "position": 6,
+   "head": 6,
+   "readout": {
+    "target_logits": [
+     -112.22746276855469,
+     -110.27361297607422
+    ],
+    "logsumexp": -102.93669891357422,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 11,
+   "position": 6,
+   "head": 7,
+   "readout": {
+    "target_logits": [
+     -112.3196029663086,
+     -110.36363220214844
+    ],
+    "logsumexp": -103.02772521972656,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 11,
+   "position": 6,
+   "head": 8,
+   "readout": {
+    "target_logits": [
+     -112.62370300292969,
+     -110.66754150390625
+    ],
+    "logsumexp": -103.31646728515625,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 11,
+   "position": 6,
+   "head": 9,
+   "readout": {
+    "target_logits": [
+     -112.28750610351562,
+     -110.33192443847656
+    ],
+    "logsumexp": -102.995361328125,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 11,
+   "position": 6,
+   "head": 10,
+   "readout": {
+    "target_logits": [
+     -112.05883026123047,
+     -109.7989501953125
+    ],
+    "logsumexp": -102.65316772460938,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  },
+  {
+   "pair": 2,
+   "component": "z",
+   "layer": 11,
+   "position": 6,
+   "head": 11,
+   "readout": {
+    "target_logits": [
+     -112.34602355957031,
+     -110.42889404296875
+    ],
+    "logsumexp": -103.04473114013672,
+    "top_token_id": 1363,
+    "top_token": " home"
+   }
+  }
+ ],
+ "metadata": {
+  "model": "openai-community/gpt2",
+  "device": "cpu",
+  "dtype": "torch.float32",
+  "versions": {
+   "torch": "2.15.0",
+   "transformer-lens": "4.3.0",
+   "transformers": "5.22.2"
+  },
+  "python": "3.13.1",
+  "n_forward_passes": 438,
+  "seconds": 11.812,
+  "created": "2026-11-09T13:39:46-0800"
+ }
+}

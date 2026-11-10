@@ -1,0 +1,10 @@
+template,id,clean_prompt,corrupted_prompt,clean_target,corrupted_target,clean_top1,corrupted_top1,clean_logit_diff,corrupted_logit_diff
+capital_of,france_italy,The capital of France is,The capital of Italy is, Paris, Rome, now, now,1.404937744140625,-4.417366027832031
+capital_of,germany_spain,The capital of Germany is,The capital of Spain is, Berlin, Madrid, now, the,3.920745849609375,-4.025459289550781
+capital_of,japan_china,The capital of Japan is,The capital of China is, Tokyo, Beijing, home, home,3.4220809936523438,-2.8162689208984375
+capital_city,france_italy,The capital city of France is,The capital city of Italy is, Paris, Rome, now, home,0.5229110717773438,-3.224639892578125
+capital_city,germany_spain,The capital city of Germany is,The capital city of Spain is, Berlin, Madrid, now, now,2.6985931396484375,-1.9868011474609375
+capital_city,japan_china,The capital city of Japan is,The capital city of China is, Tokyo, Beijing, home, home,2.1686477661132812,-1.9567718505859375
+possessive,france_italy,France's capital is,Italy's capital is, Paris, Rome, now, now,0.6365203857421875,-2.9419631958007812
+possessive,germany_spain,Germany's capital is,Spain's capital is, Berlin, Madrid, now, now,3.1735000610351562,-1.9428863525390625
+possessive,japan_china,Japan's capital is,China's capital is, Tokyo, Beijing, home, now,2.2168350219726562,-2.9444427490234375
