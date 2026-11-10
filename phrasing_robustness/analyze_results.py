@@ -237,10 +237,7 @@ def main() -> None:
                          f"{r['spearman_rank_correlation']:.2f}, "
                          f"top-10 overlap {r['top10_overlap_count']}/10")
     lines += [
-        "", "## Interpretation / follow-up (fill in after inspecting figures)",
-        "", "- Observation: TBD", "- Plausible alternative explanations: TBD",
-        "- Next controlled test: TBD", "",
-        "## Limitations", "",
+        "", "## Limitations", "",
         "- Results are conditional on pre-screened prompts that work in all three templates; this can exaggerate apparent robustness.",
         "- Input token positions differ across templates; cross-template plots compare semantic locations (country/final).",
         "- Attention-head scores are for z at the final token only; they do not isolate a full circuit.",

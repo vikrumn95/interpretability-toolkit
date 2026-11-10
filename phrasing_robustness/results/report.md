@@ -40,12 +40,6 @@ Each mean is across the same passing country pairs. Recovery is not a fraction o
 - capital_of vs possessive: Spearman 0.77, top-10 overlap 9/10
 - capital_city vs possessive: Spearman 0.78, top-10 overlap 8/10
 
-## Interpretation / follow-up (fill in after inspecting figures)
-
-- Observation: TBD
-- Plausible alternative explanations: TBD
-- Next controlled test: TBD
-
 ## Limitations
 
 - Results are conditional on pre-screened prompts that work in all three templates; this can exaggerate apparent robustness.

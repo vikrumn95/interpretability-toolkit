@@ -1,104 +1,127 @@
 # GPT-2 capital-city phrasing robustness study
 
-## Question
+**Question.** Does GPT-2 small (`openai-community/gpt2`) use similar internal components to retrieve capitals across different phrasings of the same query?
 
-For a pretrained GPT-2 Small model, are the **internal activation locations that influence country-to-capital predictions** similar across different ways of phrasing the same query?
+This is an exploratory, educational activation-patching experiment built on the `interp_toolkit` package in this repository. It is **not a claim of a novel circuit**.
 
-This is an exploratory, educational mechanistic-interpretability experiment, **not a claim of discovering a novel circuit**.
+**Status.** The pilot and the full run are complete, including the attention-head sweeps. The written analysis is in [`results/findings.md`](results/findings.md) (full run) and [`pilot_results/findings.md`](pilot_results/findings.md) (pilot).
 
-### Predeclared hypothesis
+## Results at a glance
 
-Some residual-stream layers and attention heads will show similar causal influence across wording changes, even though the country token moves to a different absolute position.
+- **Screening:** 5 of 14 candidate pairs passed under all three phrasings (France→Italy, Germany→Spain, Japan→China, Russia→Canada, Iran→Iraq).
+- **Residual stream:** the country signal stays at the country token through layer 8. It moves to the final position in **block 9** in all 15 pair × phrasing combinations.
+- **Attention heads:** the same heads dominate in every phrasing. Recovery is shown as `capital_of` / `capital_city` / `possessive`:
+  - **L9H8:** 0.50 / 0.45 / 0.35
+  - **L11H2:** 0.14 / 0.27 / 0.26
+  - **L10H0:** 0.17 / 0.10 / 0.10
+- **Negative heads:** L10H7 and L11H10 push against the clean capital.
+- **Effect of phrasing:** it changes how much each head contributes, not which heads are involved.
+- **What this supports:** shared routing of country-dependent information to the prediction position. It does not support a capital-specific retrieval circuit.
+- **Main caveat:** the capital is never GPT-2's top-1 prediction for these prompts (p ≈ 0.0002–0.006). The metric measures a relative preference between two low-probability tokens.
+- **Recommended next experiment:** a relation-swap control, such as official language instead of capital, to test whether these heads are specific to capitals. See `results/findings.md` §4.
 
-### Experimental conditions
+The pilot's 3 pairs are the first 3 pairs of the full run, and its records are identical to theirs. It is a subset of the full run, not a replication.
 
-We use three completion templates:
+## Design
 
-1. `The capital of {country} is`
-2. `The capital city of {country} is`
-3. `{country}'s capital is`
+### Templates
 
-For each candidate country pair, the first country's prompt is the *clean* input and the second country's prompt is the *corrupted* input. Neither input is objectively corrupted; these terms describe a controlled difference.
+| Name | Template |
+|---|---|
+| `capital_of` | `The capital of {country} is` |
+| `capital_city` | `The capital city of {country} is` |
+| `possessive` | `{country}'s capital is` |
 
-**Screening takes place before the patching sweeps.** We require:
+In each pair, the first country's prompt is the *clean* input and the second country's prompt is the *corrupted* input. "Corrupted" only names one side of a controlled one-token difference.
 
-- Both prompts tokenize to equal length and differ at exactly one token position (the country), so patching at that position is interpretable.
-- Both capital targets are individual GPT-2 next-tokens; the target strings include leading spaces.
-- The clean prompt favors the clean capital over the corrupted capital, and vice versa for the corrupted prompt, with a clean-to-corrupted logit-difference gap of at least `1.0` by default.
-- The pair passes these checks under **all three** phrasings. This keeps the country-pair set identical across template comparisons.
+### Screening (before any patching)
 
-**Important selection caveat:** Conditioning on working prompts in all three templates can inflate apparent phrasing robustness. The `screening.csv` file preserves every rejected candidate and its reason. The baseline preference is a *pairwise logit comparison*, not a guarantee that the correct capital is GPT-2's top-1 prediction; see recorded target ranks and top-1 predictions.
+A candidate pair is kept only if, under **all three** templates:
 
-### Experiments
+- **Prompt shape:** the two prompts have equal token length and differ at exactly one position, the country.
+- **Targets:** both capitals are single GPT-2 tokens, with a leading space.
+- **Preference:**
+  - The clean prompt prefers the clean capital, and the corrupted prompt prefers the corrupted capital.
+  - The gap between them is at least `--min-gap`, 1.0 logits by default.
 
-**Phase A — Residual-stream sweep:** For every valid pair and phrasing, patch one `resid_pre` activation vector at a time across all 12 GPT-2 layers and all prompt positions. Compare normalized recovery for two semantic positions across wording changes: the *country token* and the *final token*. A layer-0 country-token patch is a control: because the country token is the only input-token difference, this should reproduce the clean logit difference.
+Why the 9 rejected pairs failed:
+- **Multi-token capital** (Hungary, Vietnam).
+- **Wrong baseline preference** (Norway, Netherlands, and Portugal under `capital_city`).
+- **Possessive tokenization:** `{country}'s` splits into a different number of tokens than for the other country. Seven pairs failed this check, and for four of them (Austria, Finland, Cuba, Turkey) it was the only failure.
 
-**Phase B — Attention-head sweep (optional):** Patch each head's `z` output at the final token, across all layers and heads. Compare the 144 head-specific effects across phrasings with Spearman rank correlation and top-10 overlap. These measures describe similarity, not proof that an attention head implements a capital-city circuit.
+`screening.csv` records every candidate and why it was rejected.
 
-**Score:** `logit(clean_capital) - logit(corrupted_capital)`. Normalized recovery is `(patch_score - corrupted_score) / (clean_score - corrupted_score)`. Scores outside `[0, 1]` are possible; they are **not clipped** in saved data.
+**Selection caveat:** keeping only pairs that work in every template can make phrasing robustness look better than it is.
 
-### Run it
+### Sweeps
 
-From the root of your existing `interpretability-toolkit` checkout:
+- **Residual sweep:** patches one `resid_pre` vector at a time, over 12 layers × all positions. Results are compared across templates at matched *semantic* positions, the country token and the final token, because absolute indices differ.
+  - **Control:** the layer-0 country-token patch must reproduce the clean score. This is guaranteed by construction, so it checks the pipeline, not the model.
+- **Head sweep (`--heads`):** patches each head's `z` output at the final token, 144 heads in total.
+
+**Score:** `logit(clean capital) − logit(corrupted capital)` at the final token.
+
+**Recovery:** `(patched − corrupted) / (clean − corrupted)`. It is not clipped.
+
+## Running it
+
+From the repository root, with the toolkit installed (`python3 -m venv .venv && .venv/bin/pip install -e '.[dev]'`):
 
 ```bash
-# Install the toolkit/environment if necessary:
-python3 -m venv .venv
-.venv/bin/pip install -e '.[dev]'
+# Pilot: first 3 candidate pairs
+.venv/bin/python phrasing_robustness/run_experiment.py --pilot --heads --out phrasing_robustness/pilot_results
+.venv/bin/python phrasing_robustness/analyze_results.py --out phrasing_robustness/pilot_results
 
-# Small pilot, first 3 candidate pairs:
-.venv/bin/python phrasing_robustness/run_experiment.py --pilot \
-  --out phrasing_robustness/pilot_results
-.venv/bin/python phrasing_robustness/analyze_results.py \
-  --out phrasing_robustness/pilot_results
-
-# Full residual-stream study:
-.venv/bin/python phrasing_robustness/run_experiment.py \
-  --out phrasing_robustness/results
-.venv/bin/python phrasing_robustness/analyze_results.py \
-  --out phrasing_robustness/results
-
-# Optional: rerun with attention-head sweeps as well (overwrites the same result set):
-.venv/bin/python phrasing_robustness/run_experiment.py --heads \
-  --out phrasing_robustness/results
-.venv/bin/python phrasing_robustness/analyze_results.py \
-  --out phrasing_robustness/results
+# Full run (writes to phrasing_robustness/results/ by default)
+.venv/bin/python phrasing_robustness/run_experiment.py --heads
+.venv/bin/python phrasing_robustness/analyze_results.py
 ```
 
-Or use `--device auto` to select an available accelerator. The scripts use the current repository's `PromptPair`, `SweepConfig`, `run_patching_experiment`, `score`, `ExperimentResult`, and plotting API; they do not change the toolkit itself.
+**Options:**
+- `--device auto` uses an available accelerator.
+- `--max-pairs N` caps the number of passing pairs.
 
-**The scripts have been syntax-checked but were not executed against the actual GPT-2 model in this environment.** The first pilot is intended to validate that the live dependencies and prompts behave as expected.
+**Run time:** the full run with heads takes a few minutes on CPU.
 
-### Files recorded
+**Analysis:** `analyze_results.py` reads only the saved JSON, so it doesn't load the model and can be rerun freely.
 
-| File | Description |
+**Determinism:** inference is deterministic on CPU, so rerunning reproduces the committed results.
+
+Re-running `run_experiment.py` overwrites the output folder. Don't change the candidate pool or thresholds after looking at patch results unless you label the new run as a separate exploratory analysis.
+
+## Output files
+
+Each of `results/` and `pilot_results/` contains:
+
+| File | Contents |
 |---|---|
-| `manifest.json` | Model, templates, predeclared hypothesis, candidate pool, exact inclusion rules, selected pairs, repository commit |
-| `screening.csv` | Every attempted prompt pair and template, baseline logit differences, target ranks, top-1 outputs, exclusion reasons |
-| `residual_<template>.json` | Original model readouts and intervention configurations for the complete residual sweep |
-| `residual_<template>.csv` | Each residual patch's scores and recovery |
-| `residual_<template>.png` | Layer-by-position recovery heatmap for one wording |
-| `heads_<template>.json/.csv/.png` | Same for the optional individual-head sweeps |
-| `all_patch_scores.csv` | Flat combined results across wordings and interventions |
-| `baselines.csv` | Original clean/corrupted readouts for every included prompt pair |
-| `sanity_checks.csv` | Whether layer-0 country-token patches reproduce clean scores |
-| `semantic_layer_summary.csv` | Mean, median, and standard deviation by template, layer, and semantic token role |
-| `compare_country_token.png` / `compare_final_token.png` | Cross-template mean recovery versus layer; error bars are SE, **not confidence intervals** |
-| `attention_head_summary.csv` | Aggregate recovery for each of GPT-2's 144 heads, if enabled |
-| `head_comparisons.csv` | Head rank correlation and top-10 overlap between templates, if enabled |
-| `report.md` | Automatically generated initial summary with placeholders for your interpretation |
+| `findings.md` | Written analysis: residual and head observations, interpretation, limitations, next steps. Written by hand, not generated |
+| `report.md` | Auto-generated summary from `analyze_results.py` |
+| `manifest.json` | Model, templates, hypothesis, candidate pool, screening rule, selected pairs, toolkit commit |
+| `screening.csv` | Every candidate × template: baseline scores, target ranks, top-1 tokens, accept/reject reason |
+| `residual_<template>.json` / `.csv` / `.png` | Raw residual-sweep records, scored rows, layer × position heatmap |
+| `heads_<template>.json` / `.csv` / `.png` | Same for the head sweep (layer × head heatmap) |
+| `all_patch_scores.csv` | All scored patches across templates |
+| `baselines.csv` | Clean/corrupted readouts and top-1 tokens per pair and template |
+| `sanity_checks.csv` | Layer-0 country-token control |
+| `semantic_layer_summary.csv` | Recovery by template × layer × role (country / final token) |
+| `compare_country_token.png` / `compare_final_token.png` | Mean recovery vs layer per template (error bars are SE, not CIs) |
+| `attention_head_summary.csv` | Per-head mean / median / SD recovery per template |
+| `head_comparisons.csv` | Spearman correlation and top-10 overlap between templates |
 
-Do not alter the input candidate set or thresholds after examining patch results without clearly labeling a new exploratory analysis. Keep `screening.csv` and all raw JSON outputs. Do not claim that high recovery identifies a factual knowledge representation; the experiment measures **causal effect on a chosen output score**.
+**Two caveats on `report.md`:**
+- **Excluded heads:** its top-head lists and top-10 overlaps rank signed means, so negative heads (L10H7, L11H10) don't appear.
+- **Inflated Spearman:** its Spearman values are computed over all 144 heads, many of them near zero.
 
-### How to interpret the results
+`findings.md` gives matched comparisons that avoid both issues.
 
-Look at: (1) whether the layer-0 country-token control passes; (2) whether effects move from earlier country-token representations to later final-token representations; (3) which head rankings are consistent across the three phrasings; (4) how variable the effects are across country pairs. Compare template differences only at matched **semantic roles**, not necessarily at the same absolute token index. If most pairs fail screening, say so; don't quietly replace them with easier examples.
+## Limitations
 
-### Limitations / next checks
-
-- Sample is small, hand-picked, and conditionally filtered; results do not establish population-level generality.
-- Only one direction (country A to country B) is patched per pair; reversing direction is a useful follow-up.
-- Head scans use only the final token's `z` value, not every possible head-position combination.
-- The selected targets are single-token capitals. This excludes many real-world capitals.
-- A high normalized recovery can reflect broad information transplantation rather than an interpretable specialized mechanism.
-- Layer/head sweep scores are observational comparisons among interventions; further ablations or counterfactual tests would be needed for stronger circuit claims.
+- **Sample:**
+  - **Small and hand-picked:** 5 pairs, filtered by baseline behavior.
+  - **One patch direction:** each pair is patched only from clean to corrupted.
+  - **Single-token capitals only.**
+- **Weak target behavior:** the capitals are low-probability tokens, never the model's top prediction.
+- **Sufficiency only:** clean-into-corrupted patching shows a component is enough to restore the preference, not that the model needs it.
+- **Partial coverage:** heads were tested at the final token only, and MLPs were not decomposed.
+- **Descriptive only:** there are no significance tests, and high recovery measures causal effect on a chosen score, not the location of stored factual knowledge.
