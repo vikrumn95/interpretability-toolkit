@@ -46,25 +46,23 @@ From the root of your existing `interpretability-toolkit` checkout:
 python3 -m venv .venv
 .venv/bin/pip install -e '.[dev]'
 
-# Copy this entire directory to experiments/phrasing_robustness/ in the checkout.
-
 # Small pilot, first 3 candidate pairs:
-.venv/bin/python experiments/phrasing_robustness/run_experiment.py --pilot \
-  --out experiments/phrasing_robustness/pilot_results
-.venv/bin/python experiments/phrasing_robustness/analyze_results.py \
-  --out experiments/phrasing_robustness/pilot_results
+.venv/bin/python phrasing_robustness/run_experiment.py --pilot \
+  --out phrasing_robustness/pilot_results
+.venv/bin/python phrasing_robustness/analyze_results.py \
+  --out phrasing_robustness/pilot_results
 
 # Full residual-stream study:
-.venv/bin/python experiments/phrasing_robustness/run_experiment.py \
-  --out experiments/phrasing_robustness/results
-.venv/bin/python experiments/phrasing_robustness/analyze_results.py \
-  --out experiments/phrasing_robustness/results
+.venv/bin/python phrasing_robustness/run_experiment.py \
+  --out phrasing_robustness/results
+.venv/bin/python phrasing_robustness/analyze_results.py \
+  --out phrasing_robustness/results
 
 # Optional: rerun with attention-head sweeps as well (overwrites the same result set):
-.venv/bin/python experiments/phrasing_robustness/run_experiment.py --heads \
-  --out experiments/phrasing_robustness/results
-.venv/bin/python experiments/phrasing_robustness/analyze_results.py \
-  --out experiments/phrasing_robustness/results
+.venv/bin/python phrasing_robustness/run_experiment.py --heads \
+  --out phrasing_robustness/results
+.venv/bin/python phrasing_robustness/analyze_results.py \
+  --out phrasing_robustness/results
 ```
 
 Or use `--device auto` to select an available accelerator. The scripts use the current repository's `PromptPair`, `SweepConfig`, `run_patching_experiment`, `score`, `ExperimentResult`, and plotting API; they do not change the toolkit itself.

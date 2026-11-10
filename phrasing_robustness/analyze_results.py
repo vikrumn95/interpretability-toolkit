@@ -1,7 +1,7 @@
 """Analyze saved phrasing-robustness patching results WITHOUT loading GPT-2.
 
-    python experiments/phrasing_robustness/analyze_results.py
-    python experiments/phrasing_robustness/analyze_results.py --out experiments/phrasing_robustness/results
+    python phrasing_robustness/analyze_results.py
+    python phrasing_robustness/analyze_results.py --out phrasing_robustness/results
 """
 
 from __future__ import annotations
@@ -82,7 +82,7 @@ def spearman(a: list[float], b: list[float]) -> float:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--out", type=Path, default=Path("experiments/phrasing_robustness/results"))
+    parser.add_argument("--out", type=Path, default=Path(__file__).resolve().parent / "results")
     args = parser.parse_args()
     out = args.out
     manifest = json.loads((out / "manifest.json").read_text())

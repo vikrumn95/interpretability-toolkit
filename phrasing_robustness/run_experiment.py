@@ -1,9 +1,9 @@
 """Run a controlled GPT-2 capital-city phrasing-robustness patching study.
 
 Run from the interpretability-toolkit repository root after `pip install -e .`:
-    python experiments/phrasing_robustness/run_experiment.py --pilot
-    python experiments/phrasing_robustness/run_experiment.py
-    python experiments/phrasing_robustness/run_experiment.py --heads
+    python phrasing_robustness/run_experiment.py --pilot
+    python phrasing_robustness/run_experiment.py
+    python phrasing_robustness/run_experiment.py --heads
 
 The runner pre-screens candidate pairs BEFORE running patch sweeps. A pair must pass
 all three templates so comparisons use exactly the same set of countries.
@@ -144,7 +144,7 @@ def main() -> None:
                         help="Minimum clean-minus-corrupted logit-difference gap (default 1.0)")
     parser.add_argument("--max-pairs", type=int, default=None,
                         help="Maximum number of passing pairs, in predetermined candidate order")
-    parser.add_argument("--out", type=Path, default=Path("experiments/phrasing_robustness/results"))
+    parser.add_argument("--out", type=Path, default=Path(__file__).resolve().parent / "results")
     args = parser.parse_args()
     if args.min_gap <= 0 or (args.max_pairs is not None and args.max_pairs < 1):
         parser.error("--min-gap and --max-pairs must be positive")
@@ -237,7 +237,7 @@ def main() -> None:
             write_csv(out / f"heads_{template_name}.csv", head_rows)
             print(f"  {len(head_result.records)} patches, {head_result.metadata['seconds']}s")
 
-    print(f"Done. Run: python experiments/phrasing_robustness/analyze_results.py --out {out}")
+    print(f"Done. Run: python phrasing_robustness/analyze_results.py --out {out}")
 
 
 if __name__ == "__main__":
